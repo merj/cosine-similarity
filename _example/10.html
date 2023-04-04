@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="en"><!--<![endif]-->
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"52a68078fa","applicationID":"35330896","transactionName":"Jg0KEhFcXlpcERgBCQoFSxULXEU=","queueTime":0,"applicationTime":112,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Technical SEO Roundup March 2018 | MERJ</title>
+<meta name="description" content="What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt widecards, lazy loading images, John Mueller&#39;s Ask Me Anything round-up, Bing">
+<link rel="canonical" href="https://merj.com/digital/blog/technical-seo-roundup-march-2018">
+<link rel="image_src" href="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technical SEO Roundup March 2018">
+<meta property="og:description" content="What happened in Tech SEO for March? TLS v1.0 depreciation, Let&amp;#39;s Encrypt widecards, lazy loading images, John Mueller&amp;#39;s Ask Me Anything round-up, Bing parses JSON-LD &amp;amp;amp; releases Entity Search A...">
+<meta property="og:email" content="team@merj.com">
+<meta property="og:image" content="https://merj.com/assets/logo.png">
+<meta property="fb:app_id" content="1451374375123331">
+<meta name="twitter:title" content="Technical SEO Roundup March 2018">
+<meta name="twitter:description" content="What happened in Tech SEO for March? TLS v1.0 depreciation, Let&amp;#39;s Encrypt widecards, lazy loading images, John Mueller&amp;#39;s Ask Me Anything round-up, Bing parses JSON-LD &amp;amp;amp; releases Entity Search A...">
+<meta name="twitter:image" content="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta name="twitter:domain" content="https://merj.com/">
+<meta name="twitter:site" content="@MerjCom">
+<meta name="twitter:creator" content="@MerjCom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Reading Time">
+<meta name="twitter:data1" content="14 Minutes 🕑">
+<meta name="robots" content="index,follow">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="4dZdi/BYjO1huJ+jizWXE9x/LFUGFItRFx0uHb/zw4QqOwewwSE/guWFNIcHa/OzepDY8RDHSzEK8Y6lUzDuGw==">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta name="slack-app-id" content="A6M7SHS1M" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://merj.com/assets/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://merj.com/assets/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://merj.com/assets/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://merj.com/assets/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://merj.com/assets/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://merj.com/assets/favicons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" href="https://merj.com/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-16x16.png" sizes="16x16" />
+<!--[if IE]><link rel="shortcut icon" href="https://merj.com/assets/favicons/favicon.ico" /><![endif]-->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://merj.com/assets/favicons/mstile-144x144.png" />
+<link rel="stylesheet" media="all" href="https://merj.com/assets/application-7c82bf3000ab5e2cc2900446c42cec34d0ba56bd4e89ebb681ac076250a72443.css" data-turbolinks-track="reload" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials.css" />
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials-theme-flat.css" />
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Digital Blog (RSS)" href="https://merj.com/digital/blog.rss" />
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85914762-3',{'cookieDomain':'merj.com','siteSpeedSampleRate':100});
+  ga('require','linkid','linkid.js');ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+</script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/">
+    <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbar-top">
+  <ul class="navbar-nav mr-auto">
+    
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/digital/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/login">Log In</a>
+      </li>
+  </ul>
+</div>
+  </div>
+</nav>
+    <noscript>
+  <p class="alert alert-block alert-danger text-center alert-rectangle">
+    You need to turn on JavaScript.
+  </p>
+</noscript>
+
+
+
+
+    
+
+
+
+
+<div class="bg-subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-5 px-sm-2 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 px-sm-2">
+  <main role="main" class="row">
+    <article role="article" itemtype="https://schema.org/BlogArticle" class="col-12">
+
+      <header>
+        <div class="row">
+          <div class="col-12 py-5 pb-md-6 post-meta">
+            <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+            <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> <span class="hidden-xs-down">Reading Time: </span>14 Minutes</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 my-6 my-sm-9 my-md-11 text-center">
+            <h1 itemprop="headline" role="heading" class="my-0">Technical SEO Roundup March 2018</h1>
+            <p>By Ryan Siddle</p>
+          </div>
+        </div>
+
+        <meta itemprop="datePublished" content="2018-04-09" />
+        <meta itemprop="dateModified" content="2018-04-09" />
+
+        <span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="MERJ">
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://merj.com/assets/logos/logo-invert@3x.png">
+          </span>
+        </span>
+
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Ryan Siddle" />
+        </span>
+
+        <span class="hidden" itemprop="sourceOrganization">
+          <span itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MERJ" />
+          </span>
+        </span>
+
+        <hr class="col-lg-10 col-lx-9 mt-0 mb-6 mb-sm-9 mb-md-10" />
+      </header>
+
+      <div itemprop="articleBody" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2  mb-6 mb-sm-8">
+        <p>It goes without saying that the March 2018 Roundup will be one to remember. It contains a lot of actionable information, alongside no less than 47 takeaways from an Ask Me Anything (AMA) session with <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/johnmu">John Mueller</a>.</p>
+
+<h2>TLS v1.0 Depreciation</h2>
+
+<p>Most companies use some version of Transport Layer Security ("TLS") for securing HTTP. As of June 2018 however, <a target="_blank" rel="noopener noreferrer" href="https://www.pcisecuritystandards.org/documents/Migrating-from-SSL-Early-TLS-Info-Supp-v1_1.pdf">all transaction based websites must upgrade their security</a> according to the PCI Security Standards Council ("PCI SSC").</p>
+
+<p>Google has not yet implemented any penalties for websites failing to transition to a newer TLS version, but we believe that web browsers may show a website as being "Not Secure", much like the <a target="_blank" rel="noopener noreferrer" href="https://merj.com/digital/blog/technical-seo-roundup-august-2017">mixed content warning</a> already in place.</p>
+
+<p>The following cURL example returns the Google UK homepage using a TLS v1.0 connection.</p>
+
+<pre><code class="prettyprint">curl https://www.google.co.uk --tlsv1.0 --verbose
+</code></pre>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://gist.github.com/merj/d5b9708c430020f0bf4aadda455e3238">See the Google UK cached cURL request here.</a></p>
+
+<p>We have disabled TLS v1.0, so you can cURL the MERJ homepage to see what it looks like when the connection is refused.</p>
+
+<pre><code class="prettyprint">curl https://merj.com --tlsv1.0 --verbose
+</code></pre>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://gist.github.com/merj/e55847341e222d9532d48acb31023450">See the MERJ cached cURL request here.</a></p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Businesses must remove TLS v1.0 before June 2018 to remain PCI compliant.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_protocols">NGINX SSL module documentation</a> shows the protocols to use. Remove "TLSv1.0" from the list.</p>
+<code class="prettyprint">
+ssl_protocols               TLSv1.0 TLSv1.1 TLSv1.2;
+</code>
+</div></p>
+
+<h2>Let's Encrypt Announces Wildcard SSL Certificate Support</h2>
+
+<p>On 13 March Let's Encrypt announced that both ACMEv2 and wildcard certificate <a target="_blank" rel="noopener noreferrer" href="https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579">support had gone live</a>.</p>
+
+<p>The organisation stated that ACMEv2 (the updated version of its ACME protocol), had been designed with industry feedback, while also completing the IETF standards process.</p>
+
+<p>Wildcard certificates allow webmasters to secure all subdomains within a domain using a single SSL certificate, making certificate management easier to handle for people with multiple domains.</p>
+
+<p>In order to use ACMEv2 for certificates, webmasters will need a client that has been updated to ACMEv2, although it's Let's Encrypt's intention to transition all clients and subscribers to ACMEv2 at some point in the future. No end-of-life has been set for ACMEv1 as of yet.</p>
+
+<p>It's also worth noting that wildcard domains must be validated using the DNS-01 challenge type, which means that DNS TXT records must be modified in order to demonstrate domain control.</p>
+
+<p>Follow the <a target="_blank" rel="noopener noreferrer" href="https://github.com/Neilpang/acme.sh">ACME Github project</a> for ACMEv2 updates.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Check your DNS A and CNAME records that do not have SSL if intending to use ACMEv2.</p>
+<p>Ensure <em>www</em> and <em>non-www</em> subdomains are secure and redirected correctly, as we have seen many websites forget about their alternative version.</p>
+<p>If you have a staging/UAT website, add Let's Encrypt to ensure it mimics the production website.</p>
+</div></p>
+
+<h2>Lazy Loading Images</h2>
+
+<p>After admitting in 2015 that it <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=WszvyRune14#t=845">can’t see lazy loaded content on mobile</a>, Google has pledged to create advice and help documents so that webmasters can make lazy loading content and images more discoverable to GoogleBot.</p>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/schachin/status/968749076627025921">Speaking on Twitter</a>, John Mueller said that, "There are various ways to lazy-load images, it's certainly worth thinking about how the markup could work for image search indexing (some work fine, others don't). We're looking into making some clearer recommendations too."</p>
+
+<p>The documents should also help webmasters understand how to reduce loading times when utilising lazy loaded content.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>We recommend using <a target="_blank" rel="noopener noreferrer" href="https://github.com/verlok/lazyload">Lazyload by @verlok</a>.</p>
+<p>Use Fetch &amp; Render testing to ensure images are visually available. Wait for further updates to Google's documentation.</p>
+</div></p>
+
+<h2>Google Image Captions Use Page Title Element</h2>
+
+<p>Writing in Google’s blog, <em>The Keyword</em>, Paul Banister <a target="_blank" rel="noopener noreferrer" href="https://www.blog.google/products/search/get-more-useful-information-captions-google-images/">announced on 13 March</a> that captions will now be added to images in mobile search results. </p>
+
+<p>Rolling out globally, they will be displayed for mobile browsers and the Google app (iOS and Android), and are taken from the <code class="prettyprint">title</code> attribute on the page that a particular image is hosted on.</p>
+
+<p>It is hoped that the captions will give searches more context so that they can easily discover what an image is about and whether the host site could contain more relevant content.</p>
+
+<p>You can check the difference below:</p>
+
+<p><img src="/uploads/blog/google-image-captions-page-title.jpg" alt="Google Image Captions Page Title" class="img-fluid my-4 d-block mx-auto"></p>
+
+<p>A spokesperson for Google stated that although the search engine will be using page <code class="prettyprint">&lt;title&gt;</code> elements for the moment it could change this in the future "to improve the experience" for mobile users.</p>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/dannysullivan/status/973677434078838784">Speaking on Twitter</a>, Danny Sullivan stated that HTML title elements are not used in any particular way for ranking an image, so webmasters should continue captioning images exactly as before.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Consider revisiting <code class="prettyprint">&lt;title&gt;</code> elements if you have not done so in the last six months. Ensure any time sensitive dates are updated, i.e.</p>
+<code class="prettyprint">
+"Best [thing] Reviews 2018"
+</code>
+</div></p>
+
+<h2>Mobile-first Index Rolling Out &amp; Best Practice Guide Update</h2>
+
+<p>Google announced on the 26th March that the <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2018/03/rolling-out-mobile-first-indexing.html">new mobile-first index has started rolling out</a>. This expands on the small sample set of websites during an 18 month experiment. This coincides with the <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/search/mobile-sites/mobile-first-indexing">mobile-first index developer guidelines</a> being revamped. Webmasters will be updated via a Search Console alert once their website has switched over.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Review the <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/search/mobile-sites/mobile-first-indexing">mobile-first index developer guidelines</a>.
+</div></p>
+
+<h2>Minor Search Console Updates</h2>
+
+<p>On 19 March, <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/googlewmc/status/975786585684893696">Google Webmasters announced on Twitter</a> that a series of visual changes to Search Console had been made to provide webmasters with more context to data included in reports.</p>
+
+<p>Annotation cards have been added to bullet points within error reports so that webmasters can learn more about an issue on a particular date. By clicking the "view issue" link on the card, webmasters are also able to validate whether the issue has been fixed.</p>
+
+<p>Furthermore, a historic line graph column has also been added so that it is possible to see how the data point has changed over a given period of time.</p>
+
+<p>The filter/compare feature has been redesigned to offer a new look and pre-populated values have also been added.</p>
+
+<p>More generally, improvements have also been made to the date picker and comparison view.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Familiarise yourself with the new changes and make sure to utilise the new annotation cards within error reports for validating fixed issues.
+</div></p>
+
+<h2>Bing Confirms Support for JSON-LD formatted Schema.org Markup</h2>
+
+<p>Although not yet available in Bing Webmaster Tools, Bing has confirmed support for JSON-LD formatted Schema.org markup as it continues to actively bulk out its toolset.</p>
+
+<p>This is particularly noteworthy as existing support includes validation for schema.org markup in Microdata or RDFa format only.</p>
+
+<p>When pressed on the issue, Bing’s Head of Evangelism, Christi Olson, said that: "Bing has been using JSON-LD as a signal, but we are still building out the verification tools as part of the Webmaster Tools offering."</p>
+
+<p>As of yet, Bing hasn’t confirmed when support will become available to webmasters, but we’re confident that it be featured within a Roundup in the next few months.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Like Google, as Bing will be using Schema.org, it is possible to use <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/structured-data/testing-tool/">Google&amp;#39;s rich data testing tool</a>. We shall wait to see if Bing offers any additional information.
+</div></p>
+
+<h2>Bing Releases Entity Search API</h2>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://blogs.bing.com/search-quality-insights/2018-02/bing-entity-search-api-now-generally-available">Writing in its blog</a> on 1 March, Bing announced that its Bing Entity Search API became available to users in a variety of international markets including in the US, France, Germany, and the UK.</p>
+
+<p>The API is designed to offer rich and contextual information about people, places, and businesses to any app, blog, or website — working in a similar fashion to Google’s Knowledge Graph Search API.</p>
+
+<p>This means that developers and creators can now programmatically pull in Bing Entity Search  structured data onto their platforms and tools.</p>
+
+<p>Bing’s Entity Search is used by millions of users every day on platforms such as Xbox, Microsoft Office, and Skype.</p>
+
+<p>Developers can get 100 transactions per second through the API, with the standard pricing being found at $3 per 1,000 transactions.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+You can get a 90 day free trial and preview and experiment the API’s output <a target="_blank" rel="noopener noreferrer" href="https://azure.microsoft.com/en-us/services/cognitive-services/bing-entity-search-api/">here</a>.
+</div></p>
+
+<h2>Yandex 301 Replaces The Host</h2>
+
+<p>Writing in a <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/blog/webmaster/301-redirekt-zamenit-direktivu-host-pri-vybore-glavnogo-zerkala">webmaster update</a> (non-English), Yandex announced that it had now replaced the <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/support/webmaster/controlling-robot/robots-txt.html#host">Host directive</a> for site migrations with HTTP-301 for permanent redirects, which offers better support.</p>
+
+<p>New instructions for moving to a new address or protocol now look like this:</p>
+
+<ul>
+<li>Add 301 redirects from specific pages on your old site on similar pages of the new one</li>
+<li>Use the tool in Yandex.Webmaster "Site Relocation" to get the robot's attention to the changes made as soon as possible.</li>
+</ul>
+
+<p>Both migration schemes still work for the time being. If a site has already started moving according to the Host directive, developers may continue, however, they must also install corresponding redirects.</p>
+
+<p>It is advised that those planning on a move should use the new scheme. More information can be sought in the <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/support/webmaster/yandex-indexing/moving-site.html?lang=en">Yandex Site Migration documentation</a> (English).</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p><img src="/uploads/blog/yandex-relocate-website.gif" alt="Yandex Relocate Website" class="img-fluid my-4 d-block mx-auto"></p>
+<p>The Yandex website migration process (above) is now similar to Google (below).</p>
+<p><img src="/uploads/blog/google-domain-change-of-address.gif" alt="Google Domain Change of Address" class="img-fluid my-4 d-block mx-auto"></p>
+</div></p>
+
+<h2>Yandex Introduces Regional Categories for Russia</h2>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/blog/webmaster/regiony-iz-kataloga-pereezzhayut-v-vebmaster">Yandex.Catalogue regional submissions have now been moved to Yandex.Webmaster</a> , while site owners can now submit their websites to specific regions within Russia.</p>
+
+<p>All requests for websites that are to be added to regions must go through a moderation process, and businesses outside of Russia may request to be entered into a region such as <em>Russia</em> (which is generic), or a sublocality, if it is relevant. Sites may also submit to multiple regions within the country.</p>
+
+<p>The change leads us to pose a number of questions, including which georeferencing would work best for regional ranking of a site in several cities. There could be three options for this:</p>
+
+<ol>
+<li>Regions indicated in the Yandex.Catalogue </li>
+<li>Regions indicated in Yandex.Directory</li>
+<li>Direction above the region in Yandex.Webmaster</li>
+</ol>
+
+<p>Luckily, this is one question that has already been asked by a webmaster, and a Yandex employee responded (English translation): "There are three ways to submit regions where you operate, however, only the Directory submission would show a business on Yandex.Maps as well."</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>If you have cross-border sales, check your Yandex.Webmaster profile to ensure you have all your delivery regions are assigned. You will need to submit a URL that contains a specific affiliation in Russia, which can include information such as delivery details.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://webmaster.yandex.ru/site/info/regions/">Assign the Regions on Yandex.Webmaster.</a></p>
+</div></p>
+
+<h2>Subdomain vs. Subdirectory Debate Rages on (Again)</h2>
+
+<p>The fire that was lit in the <a target="_blank" rel="noopener noreferrer" href="https://merj.com/digital/blog/technical-seo-roundup-january-2018">January technical SEO</a> newsletter still has a few embers lying around from when we discussed subdomains vs. subdirectories. </p>
+
+<p>Discussing the issue on Twitter, <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/randfish/status/974011592902770688">Rand Fishkin</a> found 14 case studies that showed successful results of moving from a subdomain to a subdirectory. </p>
+
+<p>We would also like to know if any companies have had negative experiences of moving from a subdomain to a subdirectory when following migration best practices.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Our recommendation is the same as in <a target="_blank" rel="noopener noreferrer" href="https://merj.com/digital/blog/technical-seo-roundup-january-2018">January</a>. Webmasters should consider using a reverse proxy to migrate important parts of a website.
+</div></p>
+
+<h2>Google Tests Objective Answers Without Organic Results</h2>
+
+<p>During a short window, Google conducted an experiment where it showed only a single knowledge result for specific questions, such as:</p>
+
+<ul>
+<li>What time is it in Los Angeles?</li>
+<li>What is 4x6?</li>
+<li>What is 10lbs in kgs?</li>
+</ul>
+
+<p>This meant that when users searched for questions such as "what is the time in Los Angeles", the search engine omitted to display organic results in their entirety. </p>
+
+<p>Google stated that it carried out the experiment to speed up load time due to the fact that searchers "rarely use full search results," for such questions.</p>
+
+<p>It also mentioned that it provided a "show all results" button for those that did require further information.</p>
+
+<p>The test no longer appears to be active, although some sites, such as <a target="_blank" rel="noopener noreferrer" href="https://time.is/">time.is</a>, may have experienced a considerable drop in click through rates.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+No action required.
+</div></p>
+
+<h2>John Mueller's Ask Me Anything - The Golden Egg</h2>
+
+<p>Kudos to John Mueller for providing one of the most insightful few hours of SEO chat in the past five years for when he conducted an Ask Me Anything (AMA) interview on Reddit.</p>
+
+<p>Some of the main topics he covered included:</p>
+
+<ul>
+<li>Responsive design</li>
+<li>Spambots &amp; search volume</li>
+<li>SVG Animation</li>
+<li>HREFLANG</li>
+<li>Search Console (and APIs)</li>
+<li>A/B Testing</li>
+<li>SERPs API (spoiler alert — there won't be one)</li>
+<li>Duplication</li>
+<li>AJAX Crawling</li>
+<li>Error Pages</li>
+<li>Disavowing</li>
+<li>Robots directives</li>
+</ul>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Take 20 minutes to read through the <a target="_blank" rel="noopener noreferrer" href="https://www.billhartzer.com/pages/takeaways-google-john-mueller-ama-reddit/">AMA Summary by Bill Hartzer</a> or find the original AMA, <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/TechSEO/comments/87pxsu/i_am_john_mueller_webmaster_trends_analyst_at/?st=jfbq3god&amp;sh=7c9e6d9b">here</a>.
+</div></p>
+
+<h2>Additional Reading</h2>
+
+<h3>Google Algorithm Data Injection Loophole Found by Tom Anthony</h3>
+
+<p>Tom Anthony found <a target="_blank" rel="noopener noreferrer" href="http://www.tomanthony.co.uk/blog/google-xml-sitemap-auth-bypass-black-hat-seo-bug-bounty/">a really interesting way of hijacking page authority</a> through HREFLANG XML sitemaps. He was awarded $1,337 ("<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Leet">LEET</a>" status) as a bug bounty. </p>
+
+<p>This exploit would be worth considerably more to businesses, as it seemed to guarantee a page one position for competitive terms. </p>
+
+<h3>Barry Adams Curates Considerable JavaScript Resource List</h3>
+
+<p>Barry Adams started curating an impressive list of JavaScript resources, which is a worthwhile read for any company <a target="_blank" rel="noopener noreferrer" href="http://www.stateofdigital.com/javascript-seo-the-definitive-resource-list/">considering JavaScript heavy frameworks</a>.</p>
+
+<h3>JR Oakes Discusses SEO Audits Using Chrome Without Plugins</h3>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/JROakes">@JROakes</a> runs through an SEO audit using Chrome <a target="_blank" rel="noopener noreferrer" href="https://codeseo.io/google-chrome-seo-without-a-plugin/">in this article</a>. It's particularly impressive as plugins aren’t used, and features great use of the command line.</p>
+
+<h3>Autoplaying to be Muted by Default</h3>
+
+<p>Auto playing videos <a target="_blank" rel="noopener noreferrer" href="https://www.theverge.com/2018/3/22/17150870/google-chrome-autoplay-videos-sound-mute-update">will now be muted by default</a> on Chrome’s next update. It will also be possible to mute an entire website, should a user feel the need to do so.</p>
+
+<h3>Google Acquires Xively</h3>
+
+<p>Google Makes Intent to Acquire Xively, <a target="_blank" rel="noopener noreferrer" href="https://www.blog.google/topics/google-cloud/google-cloud-announces-intent-to-acquire-xively/">expanding its reach into Internet of Things</a>. We may soon find more integrations with Google through their hardware and software.</p>
+
+<h3>Google to End URL Shortener Service</h3>
+
+<p>Google is going to be <a target="_blank" rel="noopener noreferrer" href="https://www.theverge.com/2018/3/31/17184164/google-alphabet-url-shortening-service-closed">depreciating the Google URL shortener service (goo.gl)</a>.  It has given a one year depreciation window.</p>
+
+      </div>
+    </article>
+
+    <div class="col-sm-12 pb-5 text-center">
+      <div id="social-share"></div>
+    </div>
+
+
+    <div class="col-sm-12 mb-6">
+      <hr class="my-0" />
+    </div>
+
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 17 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-april-2018">Technical SEO Roundup April 2018</a>
+  </h3>
+
+  <p class="card-text">Technical SEO updates from Google were thin during April. Now is a relevant t...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 14 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-march-2018">Technical SEO Roundup March 2018</a>
+  </h3>
+
+  <p class="card-text">What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt wid...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 08 March 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 18 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-february-2018">Technical SEO Roundup February 2018</a>
+  </h3>
+
+  <p class="card-text">What happened? The AMP family grows, Chrome adds new APIs, Custom Properties ...</p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+<div id="footer-subscribe" class="col-sm-12 bg-grey py-7">
+  <form id="user-form" class="simple_form row" novalidate="novalidate" action="/newsletters" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7s7QYRkQVsH3jXtuRB5m5delat/SYG+aKmf1MoF4fM0lI4paKGnlrnOw0ErIQAJFcUqee8Szr/o3i1WKbbtRUg==" />
+    <div class="col-sm-4 offset-sm-2">
+      <h3>Want more news like this?</h3>
+      <p>Sign up for our free industry news and tools.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div id="error_explanation" class="alert alert-danger r-4" style='display:none;'>
+        <ul class="pl-3 mb-0">
+        </ul>
+      </div>
+      <div class="first_name_1526479724"><style media="screen">.first_name_1526479724 {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style><label for="first_name">If you are a human, ignore this field</label><input type="text" name="first_name" id="first_name" tabindex="-1" /></div>
+      <div class="form-group email required user_email"><label class="sr-only email required" for="user_email"><abbr title="required">*</abbr> Email</label><input class="form-control string email required" placeholder="Your work email" type="email" value="" name="user[email]" id="user_email" /></div>
+          <input type="submit" name="commit" value="Subscribe to MERJ" id="user-form-btn" class="btn btn-primary btn-sm text-center" data-disable-with="Subscribe to MERJ" />
+      <div id='user-thankyou' class="text-success" style='display:none;'>
+      </div>
+    </div>
+</form></div>
+
+
+
+
+
+      <footer id="footer-wide" class="pt-5 small">
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-3">
+              <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+            </div>
+            <div class="col-sm-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/blog">Digital Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/robots-txt-checker">Robots.txt Checker</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/terms">Terms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Help</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/sitemap">Sitemap</a>
+                </li>
+              </ul>
+
+              <a class="mr-2" href="https://twitter.com/MerjCom">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x text-white"></i>
+                </span>
+              </a>
+              <a class="mr-2" href="https://www.linkedin.com/company/merj-com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x text-white"></i>
+                </span>
+              </a>
+
+              <a class="mr-2" href="https://github.com/merj">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x text-white"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <p class="nav-link">&copy; MERJ Limited 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- /container -->
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script data-turbolinks-eval=false>window.jQuery || document.write('<script src="/assets/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://merj.com/assets/application-343091474179c77ec78796b842e6867637c4804c8fd21e5a32fd0dd9019210e5.js"></script>
+<script src="https://merj.com/assets/bootstrap.min-508195975fbea156ccca2a617478e7f1a3efba59d6cff102a060a726eeeb8205.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://merj.com/assets/ie10-viewport-bug-workaround-65a26b43455f6c4c37fd5514e5f1fd6b6e220515afd5328288617b918014fc95.js"></script>
+  <script src="https://merj.com/assets/newsletter-signup-f9c6aac94865cc0ba7de430d459efdb205f859062311a51c05cbf8912ede359b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  <script src="https://merj.com/assets/jssocials-3f940641bb5f495de7497e21996d516cd94d735da843705903b541bede779c97.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#social-share").jsSocials({
+      text: "Technical SEO Roundup March 2018",
+      shareIn: "popup",
+      url: "https://merj.com/digital/blog/technical-seo-roundup-march-2018",
+      showCount: false,
+      shares: [
+        { share: "twitter" }, "facebook", "linkedin", "googleplus", "whatsapp", "pinterest", "email"
+      ]
+    });
+    $('.card-eq').matchHeight();
+  });
+  </script>
+
+  </body>
+</html>

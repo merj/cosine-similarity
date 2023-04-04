@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="en"><!--<![endif]-->
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"52a68078fa","applicationID":"35330896","transactionName":"Jg0KEhFcXlpcERgBCQoFSxULXEU=","queueTime":0,"applicationTime":98,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Technical SEO Roundup December 2017 | MERJ</title>
+<meta name="description" content="The December was a short working month, with the holidays running into January (Happy New Year)! Ad-blocking, rich results and mobile first index were the ke...">
+<link rel="canonical" href="https://merj.com/digital/blog/technical-seo-roundup-december-2017">
+<link rel="image_src" href="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technical SEO Roundup December 2017">
+<meta property="og:description" content="The December was a short working month, with the holidays running into January (Happy New Year)! Ad-blocking, rich results and mobile first index were the key topics. Search Console (Beta) is provi...">
+<meta property="og:email" content="team@merj.com">
+<meta property="og:image" content="https://merj.com/assets/logo.png">
+<meta property="fb:app_id" content="1451374375123331">
+<meta name="twitter:title" content="Technical SEO Roundup December 2017">
+<meta name="twitter:description" content="The December was a short working month, with the holidays running into January (Happy New Year)! Ad-blocking, rich results and mobile first index were the key topics. Search Console (Beta) is provi...">
+<meta name="twitter:image" content="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta name="twitter:domain" content="https://merj.com/">
+<meta name="twitter:site" content="@MerjCom">
+<meta name="twitter:creator" content="@MerjCom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Reading Time">
+<meta name="twitter:data1" content="12 Minutes 🕑">
+<meta name="robots" content="index,follow">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Bw/3fpgHRU0MxgdQQNsPcYuZZ+uEl+Rj1oiEtBAUfKg6YY1+4IQqVObdfEdXhkpN0bAAASOZ7DEIFI8N9Y7wgA==">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta name="slack-app-id" content="A6M7SHS1M" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://merj.com/assets/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://merj.com/assets/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://merj.com/assets/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://merj.com/assets/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://merj.com/assets/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://merj.com/assets/favicons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" href="https://merj.com/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-16x16.png" sizes="16x16" />
+<!--[if IE]><link rel="shortcut icon" href="https://merj.com/assets/favicons/favicon.ico" /><![endif]-->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://merj.com/assets/favicons/mstile-144x144.png" />
+<link rel="stylesheet" media="all" href="https://merj.com/assets/application-7c82bf3000ab5e2cc2900446c42cec34d0ba56bd4e89ebb681ac076250a72443.css" data-turbolinks-track="reload" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials.css" />
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials-theme-flat.css" />
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Digital Blog (RSS)" href="https://merj.com/digital/blog.rss" />
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85914762-3',{'cookieDomain':'merj.com','siteSpeedSampleRate':100});
+  ga('require','linkid','linkid.js');ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+</script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/">
+    <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbar-top">
+  <ul class="navbar-nav mr-auto">
+    
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/digital/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/login">Log In</a>
+      </li>
+  </ul>
+</div>
+  </div>
+</nav>
+    <noscript>
+  <p class="alert alert-block alert-danger text-center alert-rectangle">
+    You need to turn on JavaScript.
+  </p>
+</noscript>
+
+
+
+
+    
+
+
+
+
+<div class="bg-subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-5 px-sm-2 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 px-sm-2">
+  <main role="main" class="row">
+    <article role="article" itemtype="https://schema.org/BlogArticle" class="col-12">
+
+      <header>
+        <div class="row">
+          <div class="col-12 py-5 pb-md-6 post-meta">
+            <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 12 January 2018
+            <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> <span class="hidden-xs-down">Reading Time: </span>12 Minutes</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 my-6 my-sm-9 my-md-11 text-center">
+            <h1 itemprop="headline" role="heading" class="my-0">Technical SEO Roundup December 2017</h1>
+            <p>By Tom Blackshire</p>
+          </div>
+        </div>
+
+        <meta itemprop="datePublished" content="2018-01-12" />
+        <meta itemprop="dateModified" content="2018-01-16" />
+
+        <span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="MERJ">
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://merj.com/assets/logos/logo-invert@3x.png">
+          </span>
+        </span>
+
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Tom Blackshire" />
+        </span>
+
+        <span class="hidden" itemprop="sourceOrganization">
+          <span itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MERJ" />
+          </span>
+        </span>
+
+        <hr class="col-lg-10 col-lx-9 mt-0 mb-6 mb-sm-9 mb-md-10" />
+      </header>
+
+      <div itemprop="articleBody" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2  mb-6 mb-sm-8">
+        <p>The December roundup is a little later than usual, due to the December/January holiday. Here is what happened during the last month of 2017.</p>
+
+<h2>Chrome's Ad-blocker</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-warning">Medium</span>
+</span></p>
+
+<p>Back on 1 June 2017, the <a target="_blank" rel="noopener noreferrer" href="https://blog.chromium.org/2017/06/improving-advertising-on-web.html">Chromium team stated</a> that it would stop showing all ads in Chrome (including those delivered by Google), on websites that are are non-compliant with the <a target="_blank" rel="noopener noreferrer" href="https://www.betterads.org/standards">Better Ads Standards</a>. Google also published an extensive <a target="_blank" rel="noopener noreferrer" href="https://www.doubleclickbygoogle.com/articles/creating-better-ad-experiences/">guide on better ad practices</a> to coincide with the announcement.</p>
+
+<p><a href="https://www.betterads.org/standards" target="_blank" rel="noopener noreferrer"><img src="/uploads/blog/coalition-for-better-ads.gif" alt="Coalition for Better Ads" class="img-fluid my-4 d-block mx-auto"></a></p>
+
+<p>The search engine has since confirmed that <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/web/updates/2017/12/better-ads">Chrome’s built-in ad-blocker</a> will be activated on 15 February 2018.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Ensure that any advertisements served are aligned with the Better Ads best practices before the activation date and that any violations are reported to webmasters via the <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/webmasters/tools/ad-experience-unverified?pli=1">Google Search Console Ad Experience Report</a>. If a violation has occurred, the webmaster can submit the site for a review once the violation has been fixed.</p>
+<p>Failing to resolve violations will lead to sites becoming blocked in Chrome, leading to a loss of revenue.</p>
+</div></p>
+
+<h2>Robots Directive Update</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>In a <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=9GNg8R-X8LQ&amp;t=54m51s">webmaster hangout</a>, John Mueller of Google explained that a long-term <code class="prettyprint">noindex, follow</code> robots directive will eventually equate to a <code class="prettyprint">noindex, nofollow</code> directive. </p>
+
+<p>When a <code class="prettyprint">noindex</code> robots directive is placed on a web page, it will reduce crawl frequency by lowering its importance. If Googlebot does not crawl a webpage at all:</p>
+
+<ul>
+<li>PageRank will not pass to any linked webpages from the original webpage.</li>
+<li>The webpage will be removed from Google's index.</li>
+</ul>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Ensure to review all webpages for the <code class="prettyprint">noindex</code> robots directive. 
+If the links on noindex webpages are not crawled, the website’s overall PageRank may be affected.
+</div></p>
+
+<h2>Check Log Files For Mobile-First Index</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>John Mueller confirmed in a <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=9GNg8R-X8LQ&amp;feature=youtu.be&amp;t=3m40s">webmaster hangout</a> that server logs will indicate whether a website has been included in Google's mobile-first index. If 80% of requests originate from <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/webmasters/answer/1061943?hl=en">Google’s Smartphone user-agent</a>, it is likely that the website is in the <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2017/12/getting-your-site-ready-for-mobile.html">mobile-first index</a>. 
+Google’s Smartphone uses the Googlebot user agent token, the same as the desktop crawler. To identify Googlebot (smartphone), check the full user agent string: </p>
+
+<pre><code class="prettyprint">Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+</code></pre>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Review your server log files and compare the two User Agents. Screaming Frog offers a simple to use <a target="_blank" rel="noopener noreferrer" href="https://www.screamingfrog.co.uk/log-file-analyser/">Log File Analyser</a> for low Googlebot traffic (less than 2,00,000 Googlebot page visits monthly).
+If you need assistance with a high traffic Googlebot server log analysis, <a href="mailto:team@merj.com">send us an email</a>. 
+</div></p>
+
+<h2>Getting Ready for mobile-first indexing</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Typically, crawling, indexing, and ranking systems analyse the desktop version of a page, which has caused issues for users when the mobile version of a website is different to the desktop version. <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2017/12/getting-your-site-ready-for-mobile.html">Mobile-first indexing</a> will see the mobile version used for crawling, indexing, and ranking to improve the experience for mobile users.</p>
+
+<p>There will be a significant increase in crawling by the user agent <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/webmasters/answer/1061943?hl=en">Smartphone Googlebot</a> and snippets in search results and the content on Google cache pages will be from the mobile version of a page.</p>
+
+<p>Google will be evaluating sites independently on their readiness for mobile-first indexing and transitioning them once they are prepared. This process has already started for a handful of sites and it is being closely monitored by the search team.</p>
+
+<p>There is no timeline for when it will be completed but Google provided the following tips:</p>
+
+<ul>
+<li>Make sure the mobile version of the site also has the important, high-quality content.</li>
+<li>Structured data is important for indexing and search features that users love; it should therefore feature both on the mobile and desktop version of the site.</li>
+<li>Metadata should also be present on both versions of the site.</li>
+<li>No changes are necessary for interlinking with separate mobile URLs (m.-dot sites). For sites using separate mobile URLs, keep the existing link <code class="prettyprint">rel="canonical"</code> and link <code class="prettyprint">rel="alternate"</code> elements between these versions.</li>
+<li>Check hreflang links on separate mobile URLs. When using link <code class="prettyprint">rel="hreflang"</code> elements for <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/webmasters/answer/182192">internationalisation</a>, link between mobile and desktop URLs separately.</li>
+<li>Ensure the servers hosting the site have enough capacity to handle potentially <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2017/01/what-crawl-budget-means-for-googlebot.html">increased crawl rate</a>.</li>
+</ul>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Sites that make use of responsive web design and correctly implement dynamic serving (this includes all desktop content and markup), generally don't have to do anything in this instance.
+</div></p>
+
+<h2>16 Month Data Retention for Google Search Console Query (Beta)</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>The Search Query date range now extends past the 90 day retention and does so for up to 16 months. We noticed that the "Full Duration" currently limits to 12 months, but expect that it will be filled up to 16 months going forward.</p>
+
+<p>The 90 day restriction still applies to <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/webmaster-tools/search-console-api-original/v3/searchanalytics/query">Search Console API</a> access.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>If you do not currently have access to Google Search Console beta, check in the top left corner of the profile to see if there is a link to "Try the new Search Console".</p>
+<p>You can also consider using the new date range for seasonal demand changes and analysis to see how queries have changed over time.
+If you need to store the data for longer than 16 months, send us an email for more information on how to do so.</p>
+</div></p>
+
+<h2>Google Increases Length of SERP Snippets</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Google has increased the length of snippets within search results. The snippet length has grown from 160 characters to 230 characters. Google has not appeared to publish the change on the webmaster blog, but instead the news comes through Search Engine Land.</p>
+
+<p>Google spokesperson did however confirm:</p>
+
+<p>"We recently made a change to provide more descriptive and useful snippets, to help people better understand how pages are relevant to their searches. This resulted in snippets becoming slightly longer, on average."</p>
+
+<p>The meta description may therefore pull additional information from the webpage’s content (and markup), if it is deemed relevant to the user's query.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Danny Sullivan, Google's public liaison officer recommended <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/dannysullivan/status/936708405363843072">not increasing meta description lengths</a> and stated that it was all part of a "more of a dynamic process." Instead, monitor rank tracking and check Google Search Console for changes in rank position and click-through rate.
+</div></p>
+
+<h2>Depreciating Old AJAX Crawling in Q2 2018</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-danger">Low</span><br>
+Difficulty: <span class="text-warning">Medium</span>
+</span></p>
+
+<p>The <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/webmasters/ajax-crawling/docs/learn-more">old AJAX crawling scheme</a> was introduced back in 2009 to make AJAX/JavaScript applications crawlable. The scheme accepted pages with either a shebang <code class="prettyprint">#!</code> in the URL or a "<a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/webmasters/ajax-crawling/docs/getting-started#3-handle-pages-without-hash-fragments">fragment meta tag</a>", and then crawls them with an <code class="prettyprint">?_escaped_fragment_=</code> in the URL. That escaped version needs to be fully rendered, and created by the website itself.</p>
+
+<p>Following JavaScript rendering improvements by Googlebot, Google stated in November 2015 that it was <a target="_blank" rel="noopener noreferrer" href="http://googlewebmastercentral.blogspot.com/2015/10/deprecating-our-ajax-crawling-scheme.html">depreciating the old AJAX scheme</a>.
+Google engineers have improved JavaScript rendering since the depreciation notice and <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2017/12/rendering-ajax-crawling-pages.html">stated in December 2017</a> that Google will be able to render both the old and current AJAX schemes on its servers, rather than that of a website.</p>
+
+<p>This change means that Googlebot will render the older AJAX scheme of shebang URL directly, making it unnecessary for the website owner to provide a rendered version of the page. We still recommend updating to use the current AJAX scheme where possible, as handling deprecated notices can still be problematic.</p>
+
+<p>When Google makes the transition to rendering all JavaScript, ensure to monitor Google Search Console for the number of pages crawled by Googlebot and the number of URLs requested in the server logs.</p>
+
+<p>One option would be to use server side rendering, John Mueller in the <a target="_blank" rel="noopener noreferrer" href="https://groups.google.com/d/msg/js-sites-wg/70GqODR-iN4/foUzscb3AQAJ">JavaScript Sites in Search Working Group</a>, said:</p>
+
+<blockquote>
+<p>"We realize this isn't trivial to do. If you can only provide your content through a "DOM-level equivalent" pre-rendered version served through dynamic serving to the appropriate clients, then that works for us too."</p>
+</blockquote>
+
+<p>The Google testing tools have been updated to accept <code class="prettyprint">#!</code> URLs:</p>
+
+<ul>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://search.google.com/test/mobile-friendly">The mobile friendly test</a>: a quick way to fetch a page and render it with Googlebot (in the smartphone version), you can do this even if you don't have the site verified.</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://support.google.com/webmasters/answer/6066468">Fetch &amp;amp; Render in Search Console</a>: check the desktop and smartphone versions (check that the full page loads, and watch for lazy-loading content).</li>
+</ul>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>If a website is using AJAX-crawling, or a service that relies upon it, such as a pre-rendering service, take a sample of URLs from different page templates and test them directly.</p>
+<p>For each page template test, set Chrome's user-agent to Googlebot and check the Document Object Model (DOM) for rendered HTML <code class="prettyprint">a</code> elements, <code class="prettyprint">rel=nofollow"</code> attributes, <code class="prettyprint">title</code> element, <code class="prettyprint">meta</code> description, canonical <code class="prettyprint">link</code> element, and structured data.</p>
+<p>AJAX requests are performed after the initial DOM load and rely on a data source. There is an additional overhead in loading AJAX on the page load, which can bloat the initial page time and the overall number of pages crawled within the allocated budget.</p>
+</div></p>
+
+<h2>Rich Results &amp; Testing Tools</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>There are many ways to markup a website’s content to provide structured data to trigger rich snippets, rich cards, or enriched results in the SERPs. Having multiple names for the same objects however, has become tricky.</p>
+
+<p>To consolidate all of the prior "rich" related terminologies, <a href="https://webmasters.googleblog.com/2017/12/rich-results-tester.html" target="_blank" rel="noopener noreferrer">Google will now refer to rich snippets and other variants as "rich results"</a>. The company is also introducing a new <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/test/rich-results">rich results testing tool</a>, with the aim of simplifying the structured data testing. The new tool provides a more accurate reflection of the page’s appearance on Search and includes improved handling for structured data found on dynamically loaded content.</p>
+
+<p>The new testing tool focuses on the structured data types that are eligible to be shown as rich results. It allows you to test all data sources on your pages, such as JSON-LD (Google’s recommendation), Microdata, and RDFa. </p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Use the new rich results testing tool to help with ongoing maintenance. If you are looking to get started with rich results, here are <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/search/docs/guides/search-gallery">Google’s guidelines on marking up website content</a>.
+</div></p>
+
+<h2>WordPress Brute Force Attack</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-warning">Medium</span>
+</span></p>
+
+<p>A massive distributed brute force attack targeting WordPress sites occurred on 18 December at 03:00 UTC. 
+The attack was broad and used a large number of attacking IPs, with each one generating a vast number of attacks. This was the most aggressive campaign seen to date and peaked at over 14 million attacks per hour.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Many articles and plugins have been created to help protect WordPress sites from brute force attacks. Here are some easy plugins to get you started:</p>
+<ul>
+<li>Enable <a target="_blank" rel="noopener noreferrer" href="https://codex.wordpress.org/Two_Step_Authentication">two-factor authentication</a> on all accounts.</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://wordpress.org/plugins/wp-limit-login-attempts/">Limit the login attempts</a> per account.</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://wordpress.org/plugins/wps-hide-login/">Hide your login page</a> and return an error header response.</li>
+</ul>
+<p>More advanced:</p>
+<ul>
+<li>Setup a VPN and only allow login from specific IP addresses.</li>
+<li>Use a Content Delivery Network such as Cloudflare.</li>
+<li>Use a honeypot on the login page.</li>
+<li>Enable a time delay login (4+ seconds).</li>
+</ul>
+</div></p>
+
+<h2>Improving Search &amp; Discovery on Google</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-danger">High</span>
+</span></p>
+
+<p>In Google's quest to keep users searching, three new core additions have been added to the search experience: </p>
+
+<p>There are now more images and related searches inside select Featured Snippets to help users discover even more about a topic. This appears to cover quite a large portion of the search results on mobile devices.</p>
+
+<p>Knowledge Panels have also been updated to show related content, so for example, while looking at the Knowledge Panel about skiing, related searches for similar sports and activities are found directly inside the result.</p>
+
+<p>When a user is researching a certain topic, footballers for instance, suggestions for related topics in the same carousel (or “vein”, to use Google terminology), will be found at the top of the search results page, so you can continue to discover other athletes during your search session.</p>
+
+<p>If a user was searching for football players for this summer’s World Cup, and searched for Neymar, followed by a search for Messi, they are likely to be shown other players featured in the competition who play for Barcelona.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Monitor rank tracking and check Google Search Console for changes in rank position and click-through rate. With Knowledge Panels becoming ever more important, well built content strategies and markup will help competitiveness in the knowledge landscape.
+</div></p>
+
+<h2>Recommended reading</h2>
+
+<p>Bartosz Góralewicz wrote an interesting article. You need to look past the click-bait title <a target="_blank" rel="noopener noreferrer" href="https://www.elephate.com/everything-you-know-about-javascript-indexing-is-wrong">Everything You Know About JavaScript Indexing is Wrong</a>.</p>
+
+<p>John Mueller clarified that there is no difference between trailing slashes on the domain name (with no subdirectory). Find the <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/JohnMu/status/943076424130363392">tweet here</a>.</p>
+
+      </div>
+    </article>
+
+    <div class="col-sm-12 pb-5 text-center">
+      <div id="social-share"></div>
+    </div>
+
+
+    <div class="col-sm-12 mb-6">
+      <hr class="my-0" />
+    </div>
+
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 17 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-april-2018">Technical SEO Roundup April 2018</a>
+  </h3>
+
+  <p class="card-text">Technical SEO updates from Google were thin during April. Now is a relevant t...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 14 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-march-2018">Technical SEO Roundup March 2018</a>
+  </h3>
+
+  <p class="card-text">What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt wid...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 08 March 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 18 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-february-2018">Technical SEO Roundup February 2018</a>
+  </h3>
+
+  <p class="card-text">What happened? The AMP family grows, Chrome adds new APIs, Custom Properties ...</p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+<div id="footer-subscribe" class="col-sm-12 bg-grey py-7">
+  <form id="user-form" class="simple_form row" novalidate="novalidate" action="/newsletters" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="i4INMmCvIqmhtZsE5jE6FuGsii+vGGSKbvmJPY+0cZO27HcyGCxNsEuu4BPxbH8qu4XtxQgWbNiwZYKEai79uw==" />
+    <div class="col-sm-4 offset-sm-2">
+      <h3>Want more news like this?</h3>
+      <p>Sign up for our free industry news and tools.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div id="error_explanation" class="alert alert-danger r-4" style='display:none;'>
+        <ul class="pl-3 mb-0">
+        </ul>
+      </div>
+      <div class="first_name_1526479725"><style media="screen">.first_name_1526479725 {position:absolute!important;top:-9999px;left:-9999px;}</style><label for="first_name">If you are a human, ignore this field</label><input type="text" name="first_name" id="first_name" tabindex="-1" /></div>
+      <div class="form-group email required user_email"><label class="sr-only email required" for="user_email"><abbr title="required">*</abbr> Email</label><input class="form-control string email required" placeholder="Your work email" type="email" value="" name="user[email]" id="user_email" /></div>
+          <input type="submit" name="commit" value="Subscribe to MERJ" id="user-form-btn" class="btn btn-primary btn-sm text-center" data-disable-with="Subscribe to MERJ" />
+      <div id='user-thankyou' class="text-success" style='display:none;'>
+      </div>
+    </div>
+</form></div>
+
+
+
+
+
+      <footer id="footer-wide" class="pt-5 small">
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-3">
+              <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+            </div>
+            <div class="col-sm-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/blog">Digital Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/robots-txt-checker">Robots.txt Checker</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/terms">Terms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Help</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/sitemap">Sitemap</a>
+                </li>
+              </ul>
+
+              <a class="mr-2" href="https://twitter.com/MerjCom">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x text-white"></i>
+                </span>
+              </a>
+              <a class="mr-2" href="https://www.linkedin.com/company/merj-com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x text-white"></i>
+                </span>
+              </a>
+
+              <a class="mr-2" href="https://github.com/merj">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x text-white"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <p class="nav-link">&copy; MERJ Limited 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- /container -->
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script data-turbolinks-eval=false>window.jQuery || document.write('<script src="/assets/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://merj.com/assets/application-343091474179c77ec78796b842e6867637c4804c8fd21e5a32fd0dd9019210e5.js"></script>
+<script src="https://merj.com/assets/bootstrap.min-508195975fbea156ccca2a617478e7f1a3efba59d6cff102a060a726eeeb8205.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://merj.com/assets/ie10-viewport-bug-workaround-65a26b43455f6c4c37fd5514e5f1fd6b6e220515afd5328288617b918014fc95.js"></script>
+  <script src="https://merj.com/assets/newsletter-signup-f9c6aac94865cc0ba7de430d459efdb205f859062311a51c05cbf8912ede359b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  <script src="https://merj.com/assets/jssocials-3f940641bb5f495de7497e21996d516cd94d735da843705903b541bede779c97.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#social-share").jsSocials({
+      text: "Technical SEO Roundup December 2017",
+      shareIn: "popup",
+      url: "https://merj.com/digital/blog/technical-seo-roundup-december-2017",
+      showCount: false,
+      shares: [
+        { share: "twitter" }, "facebook", "linkedin", "googleplus", "whatsapp", "pinterest", "email"
+      ]
+    });
+    $('.card-eq').matchHeight();
+  });
+  </script>
+
+  </body>
+</html>

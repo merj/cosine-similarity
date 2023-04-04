@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="en"><!--<![endif]-->
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"52a68078fa","applicationID":"35330896","transactionName":"Jg0KEhFcXlpcERgBCQoFSxULXEU=","queueTime":0,"applicationTime":120,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Technical SEO Roundup April 2018 | MERJ</title>
+<meta name="description" content="Technical SEO updates from Google were thin during April. Now is a relevant time to discuss technical debt. Yandex provided five updates that webmasters shou...">
+<link rel="canonical" href="https://merj.com/digital/blog/technical-seo-roundup-april-2018">
+<link rel="image_src" href="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technical SEO Roundup April 2018">
+<meta property="og:description" content="Technical SEO updates from Google were thin during April. Now is a relevant time to discuss technical debt. Yandex provided five updates that webmasters should take note of, including HREFLANG XML ...">
+<meta property="og:email" content="team@merj.com">
+<meta property="og:image" content="https://merj.com/assets/logo.png">
+<meta property="fb:app_id" content="1451374375123331">
+<meta name="twitter:title" content="Technical SEO Roundup April 2018">
+<meta name="twitter:description" content="Technical SEO updates from Google were thin during April. Now is a relevant time to discuss technical debt. Yandex provided five updates that webmasters should take note of, including HREFLANG XML ...">
+<meta name="twitter:image" content="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta name="twitter:domain" content="https://merj.com/">
+<meta name="twitter:site" content="@MerjCom">
+<meta name="twitter:creator" content="@MerjCom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Reading Time">
+<meta name="twitter:data1" content="17 Minutes 🕑">
+<meta name="robots" content="index,follow">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="0JBY55LiK+0VZkiBy0pQLKswN8coMTgtShwBgz2xeCHqTJc26UEazeimAqsw+2kCt1jaa6pL6kzFouL7R9dCKA==">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta name="slack-app-id" content="A6M7SHS1M" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://merj.com/assets/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://merj.com/assets/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://merj.com/assets/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://merj.com/assets/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://merj.com/assets/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://merj.com/assets/favicons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" href="https://merj.com/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-16x16.png" sizes="16x16" />
+<!--[if IE]><link rel="shortcut icon" href="https://merj.com/assets/favicons/favicon.ico" /><![endif]-->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://merj.com/assets/favicons/mstile-144x144.png" />
+<link rel="stylesheet" media="all" href="https://merj.com/assets/application-7c82bf3000ab5e2cc2900446c42cec34d0ba56bd4e89ebb681ac076250a72443.css" data-turbolinks-track="reload" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials.css" />
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials-theme-flat.css" />
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Digital Blog (RSS)" href="https://merj.com/digital/blog.rss" />
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85914762-3',{'cookieDomain':'merj.com','siteSpeedSampleRate':100});
+  ga('require','linkid','linkid.js');ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+</script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/">
+    <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbar-top">
+  <ul class="navbar-nav mr-auto">
+    
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/digital/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/login">Log In</a>
+      </li>
+  </ul>
+</div>
+  </div>
+</nav>
+    <noscript>
+  <p class="alert alert-block alert-danger text-center alert-rectangle">
+    You need to turn on JavaScript.
+  </p>
+</noscript>
+
+
+
+
+    
+
+
+
+
+<div class="bg-subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-5 px-sm-2 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 px-sm-2">
+  <main role="main" class="row">
+    <article role="article" itemtype="https://schema.org/BlogArticle" class="col-12">
+
+      <header>
+        <div class="row">
+          <div class="col-12 py-5 pb-md-6 post-meta">
+            <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+            <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> <span class="hidden-xs-down">Reading Time: </span>17 Minutes</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 my-6 my-sm-9 my-md-11 text-center">
+            <h1 itemprop="headline" role="heading" class="my-0">Technical SEO Roundup April 2018</h1>
+            <p>By Ryan Siddle</p>
+          </div>
+        </div>
+
+        <meta itemprop="datePublished" content="2018-05-10" />
+        <meta itemprop="dateModified" content="2018-05-11" />
+
+        <span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="MERJ">
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://merj.com/assets/logos/logo-invert@3x.png">
+          </span>
+        </span>
+
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Ryan Siddle" />
+        </span>
+
+        <span class="hidden" itemprop="sourceOrganization">
+          <span itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MERJ" />
+          </span>
+        </span>
+
+        <hr class="col-lg-10 col-lx-9 mt-0 mb-6 mb-sm-9 mb-md-10" />
+      </header>
+
+      <div itemprop="articleBody" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2  mb-6 mb-sm-8">
+        <p>To make things more digestible, we're now breaking down our technical updates by individual search engines. We actively monitor:</p>
+
+<ul>
+<li>Google</li>
+<li>Bing</li>
+<li>Yandex</li>
+<li>Baidu</li>
+<li>Facebook</li>
+<li>Pinterest</li>
+<li>Youtube</li>
+</ul>
+
+<p>You will only see the relevant sections, depending on which platforms have provided updates during a given month.</p>
+
+<h2>Google</h2>
+
+<h3>Text to Code Ratio</h3>
+
+<p>For some time webmasters have been pondering whether Google's ranking algorithms take into account the code to text ratio on web pages.</p>
+
+<p>In a <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/PvNnPd76xSU?t=18m43s">recent Google Webmaster Central hangout</a>, this popular question was raised to John Mueller and he said that this wasn't in fact the case. </p>
+
+<p>Despite this, there are certain technical aspects that we must first consider when evaluating his answer.</p>
+
+<p>Although the code to text ratio may not seem important, having a bloated Document Object Model ("DOM") structure can increase the page loading time, as the browser has to parse more elements, while applying styling and other JavaScript queries.</p>
+
+<p>Having long class names can also lead to larger HTML file sizes, while WordPress and Drupal themes often have lengthy class values. This is more applicable for web servers that do not support Gzip compression.</p>
+
+<p>With the bootstrap framework for example, we often see HTML written like this:</p>
+
+<pre><code class="prettyprint">&lt;div class="row"&gt;
+  &lt;div class="col-12"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-12"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The code above allows Bootstrap's grid system to set the margin gutters. However, the nested elements above produce the exact same margin as:</p>
+
+<pre><code class="prettyprint">&lt;div class="row"&gt;
+  &lt;div class="col-12"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Another variation we see is:</p>
+
+<pre><code class="prettyprint">&lt;div class="pull-left"&gt;
+  &lt;p&gt;Hello&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="pull-right"&gt;
+  &lt;p&gt;World&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Elements default to display as block and <code class="prettyprint">&lt;p&gt;</code> are inline. The code above could be simplified to:</p>
+
+<pre><code class="prettyprint">&lt;p class="pull-left d-block"&gt;
+Hello
+&lt;/p&gt;
+
+&lt;p class="pull-right d-block"&gt;
+World
+&lt;/p&gt;
+</code></pre>
+
+<p>If you have 30 Bootstrap cards on a single page, each with pulling left and right with <code class="prettyprint">&lt;div&gt;</code> elements, that would be a reduction of 60 additional elements that need parsing, then storing in the browser's memory.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Review web page HTML templates, CSS and JavaScript to see if it is possible to remove any unused classes and data attributes. It may be possible to create an equivalent DOM structure in more a more efficient manner (remove that <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Technical_debt">technical debt</a>).
+</div></p>
+
+<h2>PageRank Patent Updated</h2>
+
+<p>On 24 April a <a target="_blank" rel="noopener noreferrer" href="http://www.seobythesea.com/2018/04/pagerank-updated/">continuation patent of an updated PageRank</a> was granted, which could affect how sites are ranked in the future, as well as explaining why some may rank better than others.</p>
+
+<p>The updated algorithm in the patent could be significant as the "distance" between an authoritative site and those that it links to are calculated.</p>
+
+<p>The links themselves can be classified by topic once the link web page has been crawled and indexed. The best possible links are those that are considered to be closest to authoritative within the same niche. This is of course different for every niche, which changes what could be considered to be an authoritative site. The actual PageRank given could be irrelevant in obscure niches, if Google happened to show the PageRank of a particular site (it no longer does),</p>
+
+<p>Due to the fact that there aren't too many sites within small niches to build a large PageRank, small sites within smaller niches could theoretically enjoy a boost in rankings.</p>
+
+<p>The new algorithm, if implemented, could allow sites within small niches to outrank larger sites that have more links, which, will affect link building, due to the fact that it would change the solution for ranking.</p>
+
+<p>That said, not being able to see any figure means that it is something that can be controlled. In fact, John Mueller mentioned this in his recent AMA and said that:</p>
+
+<blockquote>
+<p>"You can pick a dampening factor and iteratively calculate the theoretical values based on the papers, but it has nothing to do with what happens within Google. It's a fun exercise, if you like a little bit of math but usually you'd use many more pages to make it interesting (e.g. a smaller language version of Wikipedia)."</p>
+</blockquote>
+
+<p>With that in mind, it's worth remembering that just because Google has a patent for something, it does not mean that it will use it in practice.</p>
+
+<h2>Broad Core Update</h2>
+
+<p>Broad core updates happen on a semi-regular basis and they can cause fluctuations within rankings. On 20 April Google <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/searchliaison/status/987397051997663232">confirmed via Twitter</a> that it had released a <em>broad core</em> update four days earlier, an announcement that many SEOs had been waiting for.</p>
+
+<p>Google was <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/searchliaison/status/973241540486164480">kind enough to remind webmasters</a> that if they did experience drops, that there is no "fix" for pages that perform less well.</p>
+
+<p>That said, the search engine did reiterate that although a page may fall in rankings, it does not necessarily mean that it is of low quality, rather that it could just not be as relevant for what it previously ranked well for.</p>
+
+<p>Google reminded webmasters to have patience and that over time "content may rise relative to other pages."</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Continue creating quality content that is relevant to your site and pay attention to rankings so that you can deduce what Google considers relevant right now. 
+</div></p>
+
+<h2>Snippets by Category</h2>
+
+<p>On 28 April an SEO remarked<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/iamdavidgray/status/990215892620447744"> on Twitter</a> that they saw detailed answers in a <em>featured snippet</em> (a collection of boxes) for relevant questions to the main search query.</p>
+
+<p>It may be possible to view the featured snippet yourself by searching for <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?q=garage+conversion">garage conversion</a> while using a mobile device.</p>
+
+<p>The featured snippet provides both images and text as well as expandable categories that consider the cost, plans, regulations, and insulation of garage conversions.</p>
+
+<p>For the most part, each section originates from a different site, and the extension seems to originate from the multifaceted Google featured snippets <a target="_blank" rel="noopener noreferrer" href="https://www.seroundtable.com/google-multifaceted-featured-snippets-25324.html">rolled out in March</a>.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>We recommend revisiting existing content and adding the role attribute to headings and using IDs to allow URL fragments for internal linking:</p>
+<code class="prettyprint">&lt;h2 role="heading" id="planning-permission"&gt;Garage Conversion Planning Permission&lt;/h2&gt;</code>
+<p>This can then be linked to through out the same page:</p>
+<p>When considering a garage conversion, make sure you check with your local council for <code class="prettyprint">&lt;a href="#planning-permission"&gt;planning permission&lt;/a&gt;</code>.</p>
+</div></p>
+
+<h2>Job Posting Guidelines</h2>
+
+<p>On April 27 <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2018/04/we-updated-our-job-posting-guidelines.html">Google announced</a> that it had changed its job posting guidelines in order to help the experience of job seekers.</p>
+
+<p>Among one of the first topics that it covered was the placement of structured data on a job posting’s detail page.</p>
+
+<p>In order to avoid confusion around job lists, Google recommends placing structured data on the most detailed leaf page. However it noted not to "add structured data to pages intended to present a list of jobs" and only to add it to the most specific page describing one particular job.</p>
+
+<p>The search engine also noted that it had encountered sites that include information in the JobPosting structured data that is not present anywhere else.</p>
+
+<p>To avoid jobseeker confusion, Google reminded webmasters to ensure that information within  JobPosting structured data always matches what is within the job posting page.</p>
+
+<p>If a posting violates Google’s Job Posting guidelines, the search engine could take a manual action against a site.</p>
+
+<p>The search engine also encouraged webmasters to delete filled positions as it claimed that doing so might drive more traffic as job seekers gain confidence that positions are still vacant on the site.</p>
+
+<p>Google suggests using one of the following to remove a job posting:</p>
+
+<ol>
+<li>Ensure the <code class="prettyprint">validThrough</code> property is populated and in the past.</li>
+<li>Remove the page entirely (so that requesting it returns a 404 or 410 status code).</li>
+<li>Remove <code class="prettyprint">JobPosting</code> structured data from the page.</li>
+</ol>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Of the three recommendations that Google suggests, we see one viable option:</p>
+<p>1. Add the <code class="prettyprint">validThrough</code> if you want to keep the listing in place and update the web page to let prospective readers know the job is no longer available. Perhaps the job role becomes available often?</p>
+<p>Rendering a 404 page will bloat errors on the site and point three can be avoided. Removing the <code class="prettyprint">JobPosting</code> and serving a generic "this job is no longer available" could potentially become a soft 404 error, while a 301, 302 or 307 redirect would not allow Google to see the page and source code.</p>
+<p>Remember to update the XML sitemap and ping Google.</p>
+</div></p>
+
+<h2>Google's Podcast Strategy</h2>
+
+<p>In an <a target="_blank" rel="noopener noreferrer" href="https://blog.pacific-content.com/exclusive-inside-the-new-google-podcasts-strategy-that-could-double-audiences-worldwide-b556cdc26e43">interview with Pacific Content</a>, Zach Reneau-Wedeen of Google’s podcast team mentioned that Google plans to prioritise audio the exact same way that it does with text, images, and video.</p>
+
+<p>He said that:</p>
+
+<blockquote>
+<p>"Right now Google is really good at giving you text and video related to your search query. With all the amazing work podcasters are publishing each day, there’s no good reason why audio isn't a first-class citizen in the same way."</p>
+</blockquote>
+
+<p>Interestingly, he mentioned that Google plans to incorporate podcast metadata into search results so that podcasts could be returned in search results when topics and/or people are searched for (in addition to podcast titles).</p>
+
+<p>This would imply however, that Google would have to create a way to learn about what each podcast is about, and understand the content within each individual episode.</p>
+
+<p>This opens up an entirely different vertical for SEOs in the form of audio SEO, which could involve spoken word editions of articles, sound clips, or the answering of questions.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Revise content to see if it could be curated into podcast material. Remember to optimise for iTunes too.
+</div></p>
+
+<h1>Facebook Updates</h1>
+
+<h2>Author Information</h2>
+
+<p>In order for people to better assess the stories that they see in their news feed, <a target="_blank" rel="noopener noreferrer" href="https://newsroom.fb.com/news/2018/04/news-feed-fyi-more-context/">Facebook announced</a> that it is adding additional authorship features to provide more context for people so that they can read and share stories.</p>
+
+<p>This means that when a user views a news story, they will be able to access the publisher's Wikipedia entry, alongside related articles about the same topic.</p>
+
+<p>If a publisher does not have a wikipedia entry, the platform shall state that the information is unavailable.</p>
+
+<p>An option will also be given to follow the publisher's page, as well as allowing people to see more articles from the same publisher and whether or not their friends have shared the same piece.</p>
+
+<p>Facebook is adding the features throughout the US, although it shouldn't be too long before we see the authorship features roll out across Europe.</p>
+
+<p>This should not be confused with Google's <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/webmasters/answer/6083347?hl=en">previous attempt with authorship markup</a>.</p>
+
+<p>Google is now using <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/search/docs/guides/intro-structured-data">rich cards  for authorship</a> and not <code class="prettyprint">&lt;meta&gt;</code> elements.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Ensure that all relevant pages have the Open Graph author markup. This <code class="prettyprint">&lt;meta&gt;</code> element appears to be only used by Facebook.
+</div></p>
+
+<h1>Yandex Updates</h1>
+
+<h2>HREFLANG XML Sitemaps</h2>
+
+<p>HREFLANG attributions are traditionally implemented in the <code class="prettyprint">&lt;head&gt;</code> of a HTML web page. However, each HREFLANG attribution method has benefits and drawbacks.</p>
+
+<table class="table table-bordered">
+  <tr>
+    <td>Method</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>head</td>
+        <td>
+<p>Resides within the web page HTML markup.</p>
+
+<p><b>Benefits</b></p>
+<ul>
+<li>Most common method. Lots of examples and tools for debugging.</li>
+</ul>
+
+<p><b>Drawbacks</b></p>
+<ul>
+<li>Only used by Google, however, all browsers must download the kilobytes additional response body data on every web page.</li>
+<li>Must be downloaded for every HREFLANG check, running into millions of pages and terabytes of bandwidth for many websites.</li>
+<li>Heavy cost on memory caching servers and database calls.</li>
+<li>Reliant on the <code>&lt; head &gt;</code> data downloading without interruption or blocking elements.</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td>HTTP Header </td>
+        <td>
+<p>Resides as a HTTP Header Response.</p>
+
+<p><b>Benefits</b></p>
+<ul>
+<li>Can be used for file types that are not HTML based. For example:</li>
+<li>PDF, CSV, XLSX, DOCX.</li>
+<li>The HEAD method can be requested, which returns only the header data.</li>
+</ul>
+
+<p><b>Drawbacks</b></p>
+Only used by Google, however, all browsers must download kilobytes of additional response header data on every web page.
+Less tools available for debugging.</td>
+  </tr>
+  <tr>
+    <td>XML Sitemap</td>
+    <td>Resides within XML sitemap(s), using a sub-element.
+
+<p><b>Benefits</b></p>
+<ul>
+<li>One off cost writing XML sitemaps to static files.</li>
+<li>Only read by crawlers, reducing bandwidth and improving page load speed.</li>
+<li>Easy to audit and cross reference without having to download entire web page (suitable for risk mitigation).</li>
+<li>Can be used for non-HTML file types.</li>
+</ul>
+
+<p><b>Drawbacks</b></p>
+<ul>
+<li>Sitemaps have a max file size, which is reached faster, leading to a proliferation of sitemaps. However, Google does not have a maximum limit on the number of XML sitemaps or XML sitemap index files that can be submitted.</li>
+<li>Sitemaps may take a few minutes to rebuild if URL changes are required.</li>
+<li>Yandex does not support HREFLANG XML sitemaps (affects Russian markets).</li>
+</ul>
+</td>
+  </tr>
+</table>
+
+<p>Overall, the XML sitemaps implementation has the best benefits with very little drawback.</p>
+
+<p>We recently contacted the Yandex team to understand their roadmap for HREFLANG. Although there is no official announcement on their blog, they were able to confirm that HREFLANG XML sitemaps are going to be supported in the near future, but no specific date was specified.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Businesses currently using <code class="prettyprint">&lt;head&gt;</code> for HREFLANG annotation should consider implementing XML sitemaps.</p>
+<p>Yandex currently supports only the <code class="prettyprint">&lt;head&gt;</code> markup, which can be problematic for businesses who serve Russian markets.</p>
+</div></p>
+
+<h2>Turbo Pages Debugger</h2>
+
+<p>Making the announcement on the <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/blog/webmaster/predstavlyaem-otladchik-turbo-stranits">Yandex Blog for Webmasters on 28 April</a>, the Russian search engine introduced its Turbo Pages Debugger, which allows webmasters to build template Turbo Pages with ease.</p>
+
+<p>Webmasters can assemble a page by transferring its elements into the "debugging" code block, where they can then make amendments and instantly observe any changes; allowing webmasters to check how an individual element will look within a Turbo-page.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+By using the Turbo Pages Debugger, webmasters should be able to create and verify <code class="prettyprint">CDATA</code> for multiple web pages within the entire RSS feed.
+</div></p>
+
+<h2>Algorithm Change to Combat Misleading Ads</h2>
+
+<p>On 24 April <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/blog/webmaster/o-reklame-kotoraya-vvodit-v-zabluzhdenie">Yandex announced</a> that it was releasing an algorithm change to specifically combat misleading advertisements.</p>
+
+<p>After conducting research, the search engine concluded that advertising hampering the "perception" of primary content, or interfering with site navigation, causes a negative user experience and leads to people spending less time on sites.</p>
+
+<p>The Search Team therefore announced that it had updated the algorithm that determines the impact of advertising on the usability of sites. The team also noted that it had improved the definition of misleading ads and those that it considered to interfere with site navigation.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Webmasters can check if their site is in violation of the search license in Yandex.Webmaster, in the "<a target="_blank" rel="noopener noreferrer" href="http://yandex.ru/support/webmaster-troubleshooting/threats/lowqualitysite.html">Security and violations</a>" section within "Diagnostics".
+</div></p>
+
+<h2>Helping New Brands Become Discoverable Through Virtual Assistant, Alice</h2>
+
+<p>Six months after its release, <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/blog/webmaster/nauchite-alisu-uznavat-vash-brend">Yandex has introduced a way</a> for its virtual assistant, used on  Android, iOS and Windows operating systems, to understand brand terminology.</p>
+
+<p>Posting on the Yandex Blog for Webmasters, the development team behind Alice admitted that it sometimes took the assistant a few days to understand new brand terms.</p>
+
+<p>It is therefore now possible for webmasters to submit a new word to the team so that Alice can expand its vocabulary.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+If you are implementing new brand terminology, webmasters can submit new words using <a target="_blank" rel="noopener noreferrer" href="https://tech.yandex.ru/dialogs/alice/doc/feedback-docpage/">this form</a> so that they can be used and understood by Alice.
+</div></p>
+
+<h2>New Site Notifications</h2>
+
+<p>In what it called a "small gift", the Yandex.Webmaster team <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/blog/webmaster/podarok-na-den-vebmastera-novye-uvedomleniya-o-sayte">announced on 4 April</a> that it had redesigned its site notifications with an array of new alerts.</p>
+
+<p>The team reassured webmasters that notifications can still be specified on a site by site basis or all at once, but that they can now learn about:</p>
+
+<ul>
+<li>Delegation of rights to manage the site and change the list of users managing the site.</li>
+<li>Changing the status of the application for changing the regions of the site.</li>
+<li>Changing the status of the application for the change of the site register.</li>
+<li>The appearance of data in the  "Recommended Queries" section.</li>
+<li>The appearance of data in the section "Trends".</li>
+<li>Notifications about the binding of the Yandex.Metrica counter.</li>
+</ul>
+
+<p>Webmasters should now be able to monitor data changes more conveniently, while there is also a list of new notifications than was previously available. These include:</p>
+
+<ul>
+<li>Global messages and news services for webmasters.</li>
+<li>A weekly summary of the site.</li>
+<li>The updating of the search base.</li>
+<li>The updating of the main mirror.</li>
+<li>Detection of fatal problems.</li>
+<li>Detection of critical problems.</li>
+<li>Detection of possible problems.</li>
+<li>Availability of recommendations for the site.</li>
+</ul>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Take a look through the new notification settings but note that it is more convenient to set general notification settings, as they will act immediately on all sites.</p>
+<p>Specific alerts can be made for individual sites by clicking the "set notifications for each site" separately at the bottom of the "Notifications settings" section.</p>
+</div></p>
+
+<h2>Additional Reading</h2>
+
+<p><strong>DNS Privacy</strong></p>
+
+<p>Internet users are becoming more savvy about their privacy, especially with GDPR, Cambridge Analytica et al capturing the news. </p>
+
+<p>Cloudflare and APNIC have created a solution to help prevent Internet Service Providers from listening at Domain Name Server ("DNS") level. Consider switching your DNS resolves to <a target="_blank" rel="noopener noreferrer" href="https://1.1.1.1/">https://1.1.1.1/</a></p>
+
+<p><strong>Conversion Probability</strong></p>
+
+<p>Google released <a target="_blank" rel="noopener noreferrer" href="https://plus.google.com/+GoogleAnalytics/posts/QmG4yXmhfec">Conversion Probability in Google Analytics on April 19</a>, which helps Webmasters understand the likelihood of a user converting. This new information can be found in Audience Behaviour.</p>
+
+<p><strong>Amazon Blueprints</strong></p>
+
+<p>Amazon now allows users to create their own skills and responses for Alexa, <a target="_blank" rel="noopener noreferrer" href="https://plus.google.com/+GoogleAnalytics/posts/QmG4yXmhfec">in what the giant is calling Alexa Blueprints</a>. Without writing any code, users can create voice apps, and teach the virtual assistant to respond to questions that they design.</p>
+
+<p><strong>Instagram Limits</strong></p>
+
+<p>In a bid to help boost Facebook's flagging reputation for privacy, <a target="_blank" rel="noopener noreferrer" href="https://techcrunch.com/2018/04/02/instagram-api-limit/">Instagram has cut all unofficial apps</a> built on its platform. The app also shrank the API limit from 5,000 calls per hour down to just 200.</p>
+
+<p><strong>Facebook updates number of users by affected by Data Analytica leak to 87 million</strong></p>
+
+<p>Although only 250,000 Facebook users were found to download the Data Analytica psychology app, the company was able to <a target="_blank" rel="noopener noreferrer" href="https://www.cnbc.com/2018/04/04/facebook-updates-the-number-of-users-impacted-by-cambridge-analytica-leak-to-87-million-.html">collect data on more than 87 million people</a>, far higher than the 50 million estimate that was previously reported.</p>
+
+      </div>
+    </article>
+
+    <div class="col-sm-12 pb-5 text-center">
+      <div id="social-share"></div>
+    </div>
+
+
+    <div class="col-sm-12 mb-6">
+      <hr class="my-0" />
+    </div>
+
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 17 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-april-2018">Technical SEO Roundup April 2018</a>
+  </h3>
+
+  <p class="card-text">Technical SEO updates from Google were thin during April. Now is a relevant t...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 14 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-march-2018">Technical SEO Roundup March 2018</a>
+  </h3>
+
+  <p class="card-text">What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt wid...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 08 March 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 18 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-february-2018">Technical SEO Roundup February 2018</a>
+  </h3>
+
+  <p class="card-text">What happened? The AMP family grows, Chrome adds new APIs, Custom Properties ...</p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+<div id="footer-subscribe" class="col-sm-12 bg-grey py-7">
+  <form id="user-form" class="simple_form row" novalidate="novalidate" action="/newsletters" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Cip+DLypoFmMpwLcNKZeLL8KRj06b5RY6yFeACX/kB0w9rHdxwqReXFnSPbPF2cCo2KrkbgVRjlkn714X5mqFA==" />
+    <div class="col-sm-4 offset-sm-2">
+      <h3>Want more news like this?</h3>
+      <p>Sign up for our free industry news and tools.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div id="error_explanation" class="alert alert-danger r-4" style='display:none;'>
+        <ul class="pl-3 mb-0">
+        </ul>
+      </div>
+      <div class="first_name_1526479724"><style media="screen">.first_name_1526479724 {display:none;}</style><label for="first_name">If you are a human, ignore this field</label><input type="text" name="first_name" id="first_name" tabindex="-1" /></div>
+      <div class="form-group email required user_email"><label class="sr-only email required" for="user_email"><abbr title="required">*</abbr> Email</label><input class="form-control string email required" placeholder="Your work email" type="email" value="" name="user[email]" id="user_email" /></div>
+          <input type="submit" name="commit" value="Subscribe to MERJ" id="user-form-btn" class="btn btn-primary btn-sm text-center" data-disable-with="Subscribe to MERJ" />
+      <div id='user-thankyou' class="text-success" style='display:none;'>
+      </div>
+    </div>
+</form></div>
+
+
+
+
+
+      <footer id="footer-wide" class="pt-5 small">
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-3">
+              <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+            </div>
+            <div class="col-sm-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/blog">Digital Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/robots-txt-checker">Robots.txt Checker</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/terms">Terms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Help</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/sitemap">Sitemap</a>
+                </li>
+              </ul>
+
+              <a class="mr-2" href="https://twitter.com/MerjCom">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x text-white"></i>
+                </span>
+              </a>
+              <a class="mr-2" href="https://www.linkedin.com/company/merj-com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x text-white"></i>
+                </span>
+              </a>
+
+              <a class="mr-2" href="https://github.com/merj">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x text-white"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <p class="nav-link">&copy; MERJ Limited 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- /container -->
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script data-turbolinks-eval=false>window.jQuery || document.write('<script src="/assets/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://merj.com/assets/application-343091474179c77ec78796b842e6867637c4804c8fd21e5a32fd0dd9019210e5.js"></script>
+<script src="https://merj.com/assets/bootstrap.min-508195975fbea156ccca2a617478e7f1a3efba59d6cff102a060a726eeeb8205.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://merj.com/assets/ie10-viewport-bug-workaround-65a26b43455f6c4c37fd5514e5f1fd6b6e220515afd5328288617b918014fc95.js"></script>
+  <script src="https://merj.com/assets/newsletter-signup-f9c6aac94865cc0ba7de430d459efdb205f859062311a51c05cbf8912ede359b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  <script src="https://merj.com/assets/jssocials-3f940641bb5f495de7497e21996d516cd94d735da843705903b541bede779c97.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#social-share").jsSocials({
+      text: "Technical SEO Roundup April 2018",
+      shareIn: "popup",
+      url: "https://merj.com/digital/blog/technical-seo-roundup-april-2018",
+      showCount: false,
+      shares: [
+        { share: "twitter" }, "facebook", "linkedin", "googleplus", "whatsapp", "pinterest", "email"
+      ]
+    });
+    $('.card-eq').matchHeight();
+  });
+  </script>
+
+  </body>
+</html>

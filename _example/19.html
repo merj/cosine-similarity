@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="en"><!--<![endif]-->
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"52a68078fa","applicationID":"35330896","transactionName":"Jg0KEhFcXlpcERgBCQoFSxULXEU=","queueTime":0,"applicationTime":91,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Technical SEO Roundup August 2017 | MERJ</title>
+<meta name="description" content="Read the important technical SEO monthly round up for August 2017 on our digital blog.">
+<link rel="canonical" href="https://merj.com/digital/blog/technical-seo-roundup-august-2017">
+<link rel="image_src" href="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technical SEO Roundup August 2017">
+<meta property="og:description" content="Read the important technical SEO monthly round up for August 2017 on our digital blog.">
+<meta property="og:email" content="team@merj.com">
+<meta property="og:image" content="https://merj.com/assets/logo.png">
+<meta property="fb:app_id" content="1451374375123331">
+<meta name="twitter:title" content="Technical SEO Roundup August 2017">
+<meta name="twitter:description" content="Read the important technical SEO monthly round up for August 2017 on our digital blog.">
+<meta name="twitter:image" content="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta name="twitter:domain" content="https://merj.com/">
+<meta name="twitter:site" content="@MerjCom">
+<meta name="twitter:creator" content="@MerjCom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Reading Time">
+<meta name="twitter:data1" content="6 Minutes 🕑">
+<meta name="robots" content="index,follow">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="oa1CI6WaF4I5elY2HXapOMHkWn0tD7VzUgiuIbVlY7AOiFBKbbNCJhIS6mAT1vY8xn02N0kV7QuLpDYG1EiD4Q==">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta name="slack-app-id" content="A6M7SHS1M" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://merj.com/assets/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://merj.com/assets/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://merj.com/assets/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://merj.com/assets/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://merj.com/assets/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://merj.com/assets/favicons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" href="https://merj.com/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-16x16.png" sizes="16x16" />
+<!--[if IE]><link rel="shortcut icon" href="https://merj.com/assets/favicons/favicon.ico" /><![endif]-->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://merj.com/assets/favicons/mstile-144x144.png" />
+<link rel="stylesheet" media="all" href="https://merj.com/assets/application-7c82bf3000ab5e2cc2900446c42cec34d0ba56bd4e89ebb681ac076250a72443.css" data-turbolinks-track="reload" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials.css" />
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials-theme-flat.css" />
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Digital Blog (RSS)" href="https://merj.com/digital/blog.rss" />
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85914762-3',{'cookieDomain':'merj.com','siteSpeedSampleRate':100});
+  ga('require','linkid','linkid.js');ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+</script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/">
+    <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbar-top">
+  <ul class="navbar-nav mr-auto">
+    
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/digital/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/login">Log In</a>
+      </li>
+  </ul>
+</div>
+  </div>
+</nav>
+    <noscript>
+  <p class="alert alert-block alert-danger text-center alert-rectangle">
+    You need to turn on JavaScript.
+  </p>
+</noscript>
+
+
+
+
+    
+
+
+
+
+<div class="bg-subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-5 px-sm-2 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 px-sm-2">
+  <main role="main" class="row">
+    <article role="article" itemtype="https://schema.org/BlogArticle" class="col-12">
+
+      <header>
+        <div class="row">
+          <div class="col-12 py-5 pb-md-6 post-meta">
+            <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 07 September 2017
+            <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> <span class="hidden-xs-down">Reading Time: </span>6 Minutes</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 my-6 my-sm-9 my-md-11 text-center">
+            <h1 itemprop="headline" role="heading" class="my-0">Technical SEO Roundup August 2017</h1>
+            <p>By Ryan Siddle</p>
+          </div>
+        </div>
+
+        <meta itemprop="datePublished" content="2017-09-07" />
+        <meta itemprop="dateModified" content="2017-11-27" />
+
+        <span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="MERJ">
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://merj.com/assets/logos/logo-invert@3x.png">
+          </span>
+        </span>
+
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Ryan Siddle" />
+        </span>
+
+        <span class="hidden" itemprop="sourceOrganization">
+          <span itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MERJ" />
+          </span>
+        </span>
+
+        <hr class="col-lg-10 col-lx-9 mt-0 mb-6 mb-sm-9 mb-md-10" />
+      </header>
+
+      <div itemprop="articleBody" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2  mb-6 mb-sm-8">
+        <p>We’re bringing back our technical SEO monthly roundup.</p>
+
+<p>There have been a few notices for August, but little action required for the most part.</p>
+
+<h3>Google Search Console</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Google announced early August on the Webmaster Blog that two experimental features were being released to the beta team.</p>
+
+<p>One beta tester was given access to the features and sent screenshots of their account to <a target="_blank" rel="noopener noreferrer" href="http://searchengineland.com/google-beta-testing-brand-new-google-search-console-design-279059">Search Engine Land</a>. Sharing the screenshots violated the Non-disclosure Agreement that they signed with Google and the user has since had their beta privileges revoked. </p>
+
+<div class="bg-grey py-4 px-4 mb-4">
+Important Note: If you’re lucky enough to find yourself as a beta-user, you should never share screenshots or non-public information with third parties and possibly within your own organisation. Always check the Agreement before signing and discussing with others.
+</div>
+
+<p>John Mueller confirmed on 2nd August in a Google Webmaster Hangouts session that the beta contains the user interface and data improvements.</p>
+
+<div>
+<iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/HmZEQ5Ya-Hw?start=2520&amp;end=2555&amp;autoplay=0&amp;origin=https://merj.com" frameborder="0"></iframe>
+</div>
+
+<p>As with all beta testing, not all features may become public facing. Google has not formally provided timelines for a public release. It can vary from a week to a few months, depending on the complexity of changes involved.</p>
+
+<p>We assume that Google’s Webmaster API (v3) may soon be depreciated in favour of Search Console (v1 Beta). The Search Console API currently has “Mobile-Friendly Test”, however, this could possibly be expanded to include Search Queries and Error Reporting, along with other new data sources. A transition to the new naming convention has already started.</p>
+
+<p>Developer Documentation can be found here:</p>
+
+<ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/apis-explorer/#p/webmasters/v3/">Google Webmaster API (v3) Documentation</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/webmaster-tools/search-console-api/about">URL Testing Tools API (Beta)</a></li>
+</ul>
+
+<blockquote>
+<p><em>Action: Wait for new Search Console to become publically available (or an extended invite for beta users who are not in this particular test).</em></p>
+</blockquote>
+
+<h3>Crawl Time &amp; Resource Allocation</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-danger">High</span>
+</span></p>
+
+<p>On the 2nd August, John Mueller confirmed  in a Google Webmaster Hangouts session that Googlebot limits the amount of time it spends crawling a website if the server has a high response time to first byte. The crawler will back off crawling to prevent disruption to users on the site. This has been a long standing suspicion of ours.</p>
+
+<p><em>Action: Make sure your load speeds are being monitored. Production environments can act differently to Staging/UAT environments. The simplest way is to group pages by templates, i.e. category pages, facet pages, brand pages, static pages, homepage.</em></p>
+
+<p><em>Calculate your maximum number of users at any one time, then use load testing tools such as <a target="_blank" rel="noopener noreferrer" href="https://loader.io">loader.io</a> or <a target="_blank" rel="noopener noreferrer" href="https://httpd.apache.org/docs/2.4/programs/ab.html">Apache Bench</a> to see how they perform.</em></p>
+
+<p><em>Consider upgrading the web application infrastructure (dedicated servers or cloud servers), caching requests, Domain Name Service (DNS) resolution and low-level elements to improve the initial load time.</em></p>
+
+<h3>Canonical Tags &amp; Noindexing</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-danger">Low</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Using a canonical <code class="prettyprint">&lt;link&gt;</code>  and a robots <code class="prettyprint">&lt;meta&gt;</code> element with a <code class="prettyprint">noindex</code> value will cause the canonical <code class="prettyprint">&lt;link&gt;</code> to become void. Google assumes wanting to prevent indexation of a page prevails over canonicalising to another page.</p>
+
+<p><em>Action: Avoid creating canonical <code class="prettyprint">&lt;link&gt;</code> elements and <code class="prettyprint">&lt;meta&gt;</code> robots no index rules on the same webpage.</em></p>
+
+<h3>JavaScript Hacks</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Googlebot will only index content if it visible on Document Object Model (DOM) load and onPage load call. After that, Googlebot does not index additional content, although we have seen evidence of it following JavaScript links.</p>
+
+<p><em>Action: If you have duplicate content such as Delivery &amp; Returns or sizing charts, trigger the content to load after the initial page load has completed. Tabbed content is indexable on mobile view, therefore using an AJAX request upon clicking a tab navigation would remove the duplication.</em></p>
+
+<h3>Mobile First Indexing</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-warning">Medium</span>
+</span></p>
+
+<p>Google is still working on mobile first indexing and it will take some time for them to roll it out fully. John Mueller stated that websites would be prioritised based on those “ready”, followed by the rest. Webmasters will not be notified either.</p>
+
+<p><em>Action: Keep designing for mobile experience first. Fast webpage load times, click through rates and interaction are all important parts of improving revenue.</em></p>
+
+<h3>Reverse Tabnabbing</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Although not strictly technical SEO, an important security flaw known as Reverse Tabnabbing was discovered. It allows phishing attacks, persuading users to submit personal details to well known websites. We are resurfacing, because many sites are still susceptible.</p>
+
+<p>It can occur when using the attribute <code class="prettyprint">target=”_blank”</code> on anchor elements. It first came to the mass public spotlight when Wordpress 4.7.4 included functionality that automatically added <code class="prettyprint">rel=”noopener noreferrer”</code> to all links that have a <code class="prettyprint">target=”_blank”</code> attribute. However, had been mentioned in a post by Alex at JitBit one year prior <a target="_blank" rel="noopener noreferrer" href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">“Target=&amp;quot;_blank&amp;quot; - the most underestimated vulnerability ever”</a> and first found by Aza Raskin in 2012.</p>
+
+<p>Using those two additional values in the rel attribute is a security fix and will not affect SEO.</p>
+
+<p>*Action: Update all links to include <code class="prettyprint">rel=”noreferrer noopener”</code>. If a webpage contains a<code class="prettyprint">rel=”nofollow”</code> attribute, append the two values, separated by a space. *</p>
+
+<p><em>Search web application source code and database entries for links that are affected.</em></p>
+
+<p><em>Alex (JitBit) also provided a solution for JavaScript windows.</em></p>
+
+<pre class="robots px-3">
+  <code class="m-0 py-0">
+    var newWindow = window.open();
+    newWindow.opener = null;
+        </code>
+</pre>
+
+<h3>Avoid “Not Secure” Warning in Chrome 62</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>During April 2017 the <a target="_blank" rel="noopener noreferrer" href="https://security.googleblog.com/2017/04/next-steps-toward-more-connection.html">Google Security team stated that</a> all web pages that contain a submission form, must use HTTPS . This is to protect the privacy of the user who may be submitting data to the site. Some examples of forums would include search boxes, contact information or billing information. The “Not Secure” warning would only appear with the user interacts with the form elements. Chrome Incognito mode would automatically display the “Not Secure” warning by default.</p>
+
+<p>Having the insecure mark is not a direct Google ranking signal. However, it could have an impact on click through rates, bounces and other aspects of user experience, which are known to have ranking signal influence.</p>
+
+<p>Action: Ensure all form submissions are served under a HTTPS connection. Note that enabling HTTPS is just one part of ensuring user data is secure.</p>
+
+<h3>Robots.txt Monitoring</h3>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span>
+At the beginning of August, we launched a <a target="_blank" rel="noopener noreferrer" href="https://merj.com/digital/robots-txt-checker">free robots.txt checker</a>. It turns out quite a lot of websites change their robots.txt files on a regular basis. Some companies have a good handle on their requirements, while others appear to be running rogue. We will be posting a learning session later in September.</p>
+
+<p><em>Action: Grab a free account and make sure you are monitoring all your robots.txt files on your subdomain(s) and Content Delivery Networks.</em></p>
+
+      </div>
+    </article>
+
+    <div class="col-sm-12 pb-5 text-center">
+      <div id="social-share"></div>
+    </div>
+
+
+    <div class="col-sm-12 mb-6">
+      <hr class="my-0" />
+    </div>
+
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 17 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-april-2018">Technical SEO Roundup April 2018</a>
+  </h3>
+
+  <p class="card-text">Technical SEO updates from Google were thin during April. Now is a relevant t...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 14 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-march-2018">Technical SEO Roundup March 2018</a>
+  </h3>
+
+  <p class="card-text">What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt wid...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 08 March 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 18 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-february-2018">Technical SEO Roundup February 2018</a>
+  </h3>
+
+  <p class="card-text">What happened? The AMP family grows, Chrome adds new APIs, Custom Properties ...</p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+<div id="footer-subscribe" class="col-sm-12 bg-grey py-7">
+  <form id="user-form" class="simple_form row" novalidate="novalidate" action="/newsletters" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="PUvj0yT4zLB/aKfaLPLSt758QRKlLcvSfTVx3shpTv6SbvG67NGZFFQAG4wiUo2zueUtWME3k6qkmen5qUSurw==" />
+    <div class="col-sm-4 offset-sm-2">
+      <h3>Want more news like this?</h3>
+      <p>Sign up for our free industry news and tools.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div id="error_explanation" class="alert alert-danger r-4" style='display:none;'>
+        <ul class="pl-3 mb-0">
+        </ul>
+      </div>
+      <div class="first_name_1526479726"><style media="screen">.first_name_1526479726 {position:absolute!important;top:-9999px;left:-9999px;}</style><label for="first_name">If you are a human, ignore this field</label><input type="text" name="first_name" id="first_name" tabindex="-1" /></div>
+      <div class="form-group email required user_email"><label class="sr-only email required" for="user_email"><abbr title="required">*</abbr> Email</label><input class="form-control string email required" placeholder="Your work email" type="email" value="" name="user[email]" id="user_email" /></div>
+          <input type="submit" name="commit" value="Subscribe to MERJ" id="user-form-btn" class="btn btn-primary btn-sm text-center" data-disable-with="Subscribe to MERJ" />
+      <div id='user-thankyou' class="text-success" style='display:none;'>
+      </div>
+    </div>
+</form></div>
+
+
+
+
+
+      <footer id="footer-wide" class="pt-5 small">
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-3">
+              <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+            </div>
+            <div class="col-sm-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/blog">Digital Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/robots-txt-checker">Robots.txt Checker</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/terms">Terms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Help</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/sitemap">Sitemap</a>
+                </li>
+              </ul>
+
+              <a class="mr-2" href="https://twitter.com/MerjCom">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x text-white"></i>
+                </span>
+              </a>
+              <a class="mr-2" href="https://www.linkedin.com/company/merj-com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x text-white"></i>
+                </span>
+              </a>
+
+              <a class="mr-2" href="https://github.com/merj">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x text-white"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <p class="nav-link">&copy; MERJ Limited 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- /container -->
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script data-turbolinks-eval=false>window.jQuery || document.write('<script src="/assets/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://merj.com/assets/application-343091474179c77ec78796b842e6867637c4804c8fd21e5a32fd0dd9019210e5.js"></script>
+<script src="https://merj.com/assets/bootstrap.min-508195975fbea156ccca2a617478e7f1a3efba59d6cff102a060a726eeeb8205.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://merj.com/assets/ie10-viewport-bug-workaround-65a26b43455f6c4c37fd5514e5f1fd6b6e220515afd5328288617b918014fc95.js"></script>
+  <script src="https://merj.com/assets/newsletter-signup-f9c6aac94865cc0ba7de430d459efdb205f859062311a51c05cbf8912ede359b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  <script src="https://merj.com/assets/jssocials-3f940641bb5f495de7497e21996d516cd94d735da843705903b541bede779c97.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#social-share").jsSocials({
+      text: "Technical SEO Roundup August 2017",
+      shareIn: "popup",
+      url: "https://merj.com/digital/blog/technical-seo-roundup-august-2017",
+      showCount: false,
+      shares: [
+        { share: "twitter" }, "facebook", "linkedin", "googleplus", "whatsapp", "pinterest", "email"
+      ]
+    });
+    $('.card-eq').matchHeight();
+  });
+  </script>
+
+  </body>
+</html>

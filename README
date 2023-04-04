@@ -1,0 +1,66 @@
+similarity
+
+An efficient and scalable toolchain for performing similarity analysis, implemented using Tf-idf and cosine similarity.
+
+GETTING STARTED
+
+1 cs1 process comparing 9000 documents in 1 part
+
+$ tf 9000
+$ idf 9000
+$ tfidf 9000
+$ cs 1 9000
+...
+$
+
+4 cs0 processes comparing 9000 documents in 4 parts
+
+$ tf 9000
+$ idf 9000
+$ tfidf 9000
+$ cs 0 9000 4
+...
+$
+
+4 cs1 processes comparing 9000 documents in 9 parts
+
+$ tf 9000
+$ idf 9000
+$ tfidf 9000
+$ cs 1 9000 4 9
+...
+$
+
+Also see example/README
+
+LICENSE
+
+All rights reserved.
+
+EXIT CODES
+
+Unless otherwise stated commands returns 0 on success, 1 on usage error, 2 on authorization error and 3+ for any other error.
+
+Unexpected errors may produce unexpected output.
+
+GLOSSARY
+
+tf      term frequency adjusted for document length
+idf     inverse document frequency
+tfidf   term frequency * inverse document frequency
+cs0     space optimized cosine similarity
+cs1     time optimized cosine similarity
+cs      multi-process cosine similarity frontend
+
+DETAILS
+
+tf(t,d)= f(t,d)/|d|
+idf(t,D) = log(|D|/(1+|{d in D:t in d}|))
+tfidf(t,d,D) = tf(t,d)*idf(t,D)
+
+https://en.wikipedia.org/wiki/Tf-idf
+
+cs(a,b) = (a.b)/(||a||*||b||)
+
+https://en.wikipedia.org/wiki/Vector_space_model
+https://en.wikipedia.org/wiki/Cosine_similarity

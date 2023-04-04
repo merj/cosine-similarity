@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="en"><!--<![endif]-->
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"52a68078fa","applicationID":"35330896","transactionName":"Jg0KEhFcXlpcERgBCQoFSxULXEU=","queueTime":0,"applicationTime":128,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Dynamic Classifications with Excel: LOOKUP + SEARCH | MERJ</title>
+<meta name="description" content="VLOOKUP is one of the most useful functions in Excel for intermediate and power users. Here is a formula using LOOKUP + SEARCH that can help you classify sea...">
+<link rel="canonical" href="https://merj.com/digital/blog/dynamic-classifications-with-excel-lookup-and-search">
+<link rel="image_src" href="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dynamic Classifications with Excel: LOOKUP + SEARCH">
+<meta property="og:description" content="VLOOKUP is one of the most useful functions in Excel for intermediate and power users. Here is a formula using LOOKUP + SEARCH that can help you classify search phrases with premade lists.">
+<meta property="og:email" content="team@merj.com">
+<meta property="og:image" content="https://merj.com/assets/logo.png">
+<meta property="fb:app_id" content="1451374375123331">
+<meta name="twitter:title" content="Dynamic Classifications with Excel: LOOKUP + SEARCH">
+<meta name="twitter:description" content="VLOOKUP is one of the most useful functions in Excel for intermediate and power users. Here is a formula using LOOKUP + SEARCH that can help you classify search phrases with premade lists.">
+<meta name="twitter:image" content="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta name="twitter:domain" content="https://merj.com/">
+<meta name="twitter:site" content="@MerjCom">
+<meta name="twitter:creator" content="@MerjCom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Reading Time">
+<meta name="twitter:data1" content="5 Minutes 🕑">
+<meta name="robots" content="index,follow">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="usnfBr9JNkC1lb8lj5yVZdtDwBSVkNtyerddSNH7Iqb8kat0ASugUZGEWioPHjxgvZR6xvgS1W+SkXv3OW98kg==">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta name="slack-app-id" content="A6M7SHS1M" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://merj.com/assets/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://merj.com/assets/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://merj.com/assets/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://merj.com/assets/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://merj.com/assets/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://merj.com/assets/favicons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" href="https://merj.com/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-16x16.png" sizes="16x16" />
+<!--[if IE]><link rel="shortcut icon" href="https://merj.com/assets/favicons/favicon.ico" /><![endif]-->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://merj.com/assets/favicons/mstile-144x144.png" />
+<link rel="stylesheet" media="all" href="https://merj.com/assets/application-7c82bf3000ab5e2cc2900446c42cec34d0ba56bd4e89ebb681ac076250a72443.css" data-turbolinks-track="reload" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials.css" />
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials-theme-flat.css" />
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Digital Blog (RSS)" href="https://merj.com/digital/blog.rss" />
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85914762-3',{'cookieDomain':'merj.com','siteSpeedSampleRate':100});
+  ga('require','linkid','linkid.js');ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+</script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/">
+    <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbar-top">
+  <ul class="navbar-nav mr-auto">
+    
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/digital/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/login">Log In</a>
+      </li>
+  </ul>
+</div>
+  </div>
+</nav>
+    <noscript>
+  <p class="alert alert-block alert-danger text-center alert-rectangle">
+    You need to turn on JavaScript.
+  </p>
+</noscript>
+
+
+
+
+    
+
+
+
+
+<div class="bg-subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-5 px-sm-2 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 px-sm-2">
+  <main role="main" class="row">
+    <article role="article" itemtype="https://schema.org/BlogArticle" class="col-12">
+
+      <header>
+        <div class="row">
+          <div class="col-12 py-5 pb-md-6 post-meta">
+            <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 12 December 2017
+            <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> <span class="hidden-xs-down">Reading Time: </span>5 Minutes</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 my-6 my-sm-9 my-md-11 text-center">
+            <h1 itemprop="headline" role="heading" class="my-0">Dynamic Classifications with Excel: LOOKUP + SEARCH</h1>
+            <p>By Ryan Siddle</p>
+          </div>
+        </div>
+
+        <meta itemprop="datePublished" content="2017-12-12" />
+        <meta itemprop="dateModified" content="2018-04-26" />
+
+        <span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="MERJ">
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://merj.com/assets/logos/logo-invert@3x.png">
+          </span>
+        </span>
+
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Ryan Siddle" />
+        </span>
+
+        <span class="hidden" itemprop="sourceOrganization">
+          <span itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MERJ" />
+          </span>
+        </span>
+
+        <hr class="col-lg-10 col-lx-9 mt-0 mb-6 mb-sm-9 mb-md-10" />
+      </header>
+
+      <div itemprop="articleBody" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2  mb-6 mb-sm-8">
+        <p>If you like <code class="prettyprint">VLOOKUP</code>, <code class="prettyprint">HLOOKUP</code> or <code class="prettyprint">INDEX + MATCH</code>, then you're going to love <code class="prettyprint">LOOKUP + SEARCH</code>. </p>
+
+<p><strong>Warning: This tip is for intermediate Excel users. Do not attempt to read before 08:30 or without coffee in hand.</strong></p>
+
+<p>Are you a returning reader? Skip straight to the <a href="#dynamic-classification-example">Excel download</a> or the <a href="#classification-formula">Classification formula</a> if you wish.</p>
+
+<p><a href="/uploads/blog/MERJ-Excel-Dynamic-Classifications.xlsx" rel="noopener noreferrer" target="_blank">
+<img src="/uploads/blog/dynamic-classifications-in-excel.gif" alt="Dynamic Classifications in Excel" class="img-fluid my-4 d-block mx-auto">
+</a></p>
+
+<h2>Classification Problem</h2>
+
+<p>A word or group of words within a search phrase may need to be classified. We build out search phrase data models that contain properties of an item. For example a jacket has:</p>
+
+<ul>
+<li>Colour (Red, Black, Blue, Green, ...)</li>
+<li>Materials (Leather, Duffel, ...)</li>
+<li>Size (Small, Medium, Large, ...)</li>
+<li>Type (Bomber, Sports, ...)</li>
+</ul>
+
+<p>Those list values can be used for variable substitution.</p>
+
+<table class="table table-striped table-sm">
+<thead>
+<tr>
+<th>Search Phrase</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>coats</td>
+<td>[coats]</td>
+</tr>
+<tr>
+<td>jackets</td>
+<td>[jackets]</td>
+</tr>
+<tr>
+<td>blue coat</td>
+<td>[colour] [coats]</td>
+</tr>
+<tr>
+<td>black coat</td>
+<td>[colour] [coats]</td>
+</tr>
+<tr>
+<td>duffle jacket</td>
+<td>[material] [jackets]</td>
+</tr>
+<tr>
+<td>buy duffle jacket</td>
+<td>[purchasing] [material] [jackets]</td>
+</tr>
+<tr>
+<td>small brown winter coat</td>
+<td>[size] [colour] [season] [coats]</td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+
+<p>For a keyword analysis of 50,000+ phrases, being able to filter the data in Excel can be tricky using just the 'contains'.</p>
+
+<p><img src="/uploads/blog/search-contains-excel.gif" alt="Search Contains in Excel" class="img-fluid my-4 d-block mx-auto"></p>
+
+<div id="classification-formula">
+<h2>Classification Solution</h2>
+</div>
+
+<p>PPC Campaigns are structured as a tree node, whereby a word group belongs to a campaign. This does not allow for a keyword phrase to appear under multiple nodes of the same data set. Instead, a better solution is to classify words rather than entire search phrases so filters can be applied to important properties.</p>
+
+<p>Lists are a powerful way of dynamically classifying the search phrases. Here are some list examples:</p>
+
+<ul>
+<li>Genders (men's, man, women's, woman, ladies)</li>
+<li>Materials (denim, leather, suede)</li>
+<li>Occasions (birthday, christmas, easter)</li>
+<li>Relationships (husband, wife, brother, sister)</li>
+<li>Seasons (spring, summer, autumn, winter)</li>
+<li>Timeframes (monday, tuesday, weekend, weekday, january, february)</li>
+</ul>
+
+<p><strong>Tip: If you are working at an agency, ask your clients to send you lists of data, such as categories and product properties.</strong></p>
+
+<p>Ready to work through the classification formula? Here is an example to get you started. Study the formulas in the sheets along with this tutorial.</p>
+
+<div class="text-center py-6" id="dynamic-classification-example">
+<a href="/uploads/blog/MERJ-Excel-Dynamic-Classifications.xlsx" class="btn btn-success" rel="noopener noreferrer" target="_blank">Download Classification Example</a>
+</div>
+
+<p>The combination of a <code class="prettyprint">LOOKUP</code> vector with <code class="prettyprint">SEARCH</code> allows Excel users to find a group of characters within another group of characters (substring matching).</p>
+
+<p><code class="prettyprint">LOOKUP</code> is not case sensitive, however it is good practice to keep the data uniform. Make sure you <code class="prettyprint">TRIM</code> the data to remove any spaces at the beginning or end.</p>
+
+<p>Excel <code class="prettyprint">ARRAY</code>s are extremely difficult to use, often cause bugs and very slow, so instead we create a searchable vector.</p>
+
+<h3>SEARCH Function</h3>
+
+<p>This is done by using the <code class="prettyprint">SEARCH</code> function with the premade list as the "<code class="prettyprint">find_text</code>" attribute, and the string for the "<code class="prettyprint">within_text</code>" attribute that we are trying to lookup. It is important to use absolute cell references.</p>
+
+<p>For example, assuming the keywords we wish to search are on the current tab, in cell <code class="prettyprint">G2</code> the list is on a tab called <em>Genders</em> and the list has 5 items in <em>Column A</em>, the formula would be:</p>
+
+<pre><code class="prettyprint">=SEARCH(Genders!$A$1:$A$5,$G2)
+</code></pre>
+
+<p>This will not work yet, so expect an <code class="prettyprint">#N/A</code> result.</p>
+
+<h3>LOOKUP + SEARCH Function</h3>
+
+<p>Now wrap that <code class="prettyprint">SEARCH</code> inside a <code class="prettyprint">LOOKUP</code>, using a "<code class="prettyprint">lookup_value</code>" of <code class="prettyprint">2^10</code>, "<code class="prettyprint">lookup_vector</code>" is the  <code class="prettyprint">SEARCH</code> you just performed and the "<code class="prettyprint">result_vector</code>" is the same <em>Genders</em> list as in the the <code class="prettyprint">SEARCH</code> function, with absolute references.</p>
+
+<pre><code class="prettyprint">=LOOKUP(2^10,SEARCH(Genders!$A$1:$A$5,$G2),Genders!$A$1:$A$5)
+</code></pre>
+
+<h3>Error Handling</h3>
+
+<p>This formula now show substrings that are within the list and an <code class="prettyprint">#N/A</code> value if a match is not found. To make this more friendly, wrap it in an <code class="prettyprint">IFERROR</code> statement so that a hyphen is presented if no match is found.</p>
+
+<pre><code class="prettyprint">=IFERROR(LOOKUP(2^10,SEARCH(Genders!$A$1:$A$5,$G2),Genders!$A$1:$A$5),"-")
+</code></pre>
+
+<h3>Grouping Items of a List</h3>
+
+<p>If your list contains variations of a topic, such as gender, each item will printed individually, i.e. "<em>women's</em>", "<em>woman</em>", "<em>ladies</em>". To collect those variations under a single category of "<em>Women's</em>", add a column in the <em>Genders</em> tab, <em>Column B</em> with the grouping.</p>
+
+<table class="table table-striped table-sm">
+<thead>
+<tr>
+<th>Search Phrase</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Women's</td>
+<td>Women's</td>
+</tr>
+<tr>
+<td>Women</td>
+<td>Women's</td>
+</tr>
+<tr>
+<td>Ladies</td>
+<td>Women's</td>
+</tr>
+<tr>
+<td>Woman</td>
+<td>Women's</td>
+</tr>
+<tr>
+<td>Men's</td>
+<td>Men's</td>
+</tr>
+<tr>
+<td>Men</td>
+<td>Men's</td>
+</tr>
+<tr>
+<td>Man</td>
+<td>Men's</td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+
+<p>You can now use <code class="prettyprint">VLOOKUP</code> against the value received from <code class="prettyprint">LOOKUP + SEARCH</code> to power <code class="prettyprint">VLOOKUP</code>. See the tab <em>Keyword List (#2)</em> for examples.</p>
+
+<h3 id="classification-formula">The Final Grouping Classification Formula</h3>
+
+<pre><code class="prettyprint">=VLOOKUP((IFERROR(LOOKUP(2^10,SEARCH(Genders!$A$1:$A$5,$G2),Genders!$A$1:$A$5),"-")),Genders!$A:$B,2,0)
+</code></pre>
+
+<p>You will need to scroll to see the entire code. You now have a dynamically generated classification through substring matching.</p>
+
+<h3>Important Notes</h3>
+
+<p><strong>The <code class="prettyprint">-</code> Hack</strong></p>
+
+<p>If you decide to extend any of the classifications, you will need to insert a new line. Even with absolute cell references, they can often shift from <code class="prettyprint">$A$1</code> to <code class="prettyprint">$A$2</code> if you prepend or append to the list. By using a hyphen at the beginning and end, insert inbetween the hyphens to automatically extend the list, without the need for editing the absolute cell references.</p>
+
+<p><strong>Empty Cells</strong></p>
+
+<p>Empty cells are not allowed in the list, it will break the formula.</p>
+
+<p><strong>Substrings</strong></p>
+
+<p>This classification will match substrings. This means if you have a word such as "<em>coat</em>", it will match "<em>coat</em>", "<em>coats</em>", "<em>overcoat</em>", but also "<em>coating</em>". This could be a problem if you have substrings with multiple meanings.</p>
+
+<p><strong>Make the List Absolute Cell References Dynamic</strong></p>
+
+<p>This could be done with the use of <code class="prettyprint">COUNTA</code>, <code class="prettyprint">INDIRECT</code> and <code class="prettyprint">CONCATENATION</code> functions. However, this would need to be computed upon each cell unless the value is stored somewhere. This also makes the formula almost unusable and a lot more complicated than just using "<em>The <code class="prettyprint">-</code> Hack</em>".</p>
+
+<p><strong>Double Classifications</strong></p>
+
+<p>Some listings may have more than one match. For example, a keyword term could be "<em>black and white dresses</em>", so the first colour "<em>black</em>" would be matched, unless there was a "<em>black and white</em>" classification.</p>
+
+<p>Have any questions? <a href="mailto:ryan.siddle@merj.com">Send me an email</a> or find me on Twitter <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ryansiddle">@ryansiddle</a>.</p>
+
+      </div>
+    </article>
+
+    <div class="col-sm-12 pb-5 text-center">
+      <div id="social-share"></div>
+    </div>
+
+
+    <div class="col-sm-12 mb-6">
+      <hr class="my-0" />
+    </div>
+
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 17 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-april-2018">Technical SEO Roundup April 2018</a>
+  </h3>
+
+  <p class="card-text">Technical SEO updates from Google were thin during April. Now is a relevant t...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 14 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-march-2018">Technical SEO Roundup March 2018</a>
+  </h3>
+
+  <p class="card-text">What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt wid...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 08 March 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 18 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-february-2018">Technical SEO Roundup February 2018</a>
+  </h3>
+
+  <p class="card-text">What happened? The AMP family grows, Chrome adds new APIs, Custom Properties ...</p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+<div id="footer-subscribe" class="col-sm-12 bg-grey py-7">
+  <form id="user-form" class="simple_form row" novalidate="novalidate" action="/newsletters" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4coTrnPBgkWrTjiFVd/fm+8Dy424/LHu1YyNKiwIkuKnkmfczaMUVI9f3YrVXXaeidRxX9V+v/M9qquVxJzM1g==" />
+    <div class="col-sm-4 offset-sm-2">
+      <h3>Want more news like this?</h3>
+      <p>Sign up for our free industry news and tools.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div id="error_explanation" class="alert alert-danger r-4" style='display:none;'>
+        <ul class="pl-3 mb-0">
+        </ul>
+      </div>
+      <div class="first_name_1526479726"><style media="screen">.first_name_1526479726 {position:absolute!important;top:-9999px;left:-9999px;}</style><label for="first_name">If you are a human, ignore this field</label><input type="text" name="first_name" id="first_name" tabindex="-1" /></div>
+      <div class="form-group email required user_email"><label class="sr-only email required" for="user_email"><abbr title="required">*</abbr> Email</label><input class="form-control string email required" placeholder="Your work email" type="email" value="" name="user[email]" id="user_email" /></div>
+          <input type="submit" name="commit" value="Subscribe to MERJ" id="user-form-btn" class="btn btn-primary btn-sm text-center" data-disable-with="Subscribe to MERJ" />
+      <div id='user-thankyou' class="text-success" style='display:none;'>
+      </div>
+    </div>
+</form></div>
+
+
+
+
+
+      <footer id="footer-wide" class="pt-5 small">
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-3">
+              <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+            </div>
+            <div class="col-sm-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/blog">Digital Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/robots-txt-checker">Robots.txt Checker</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/terms">Terms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Help</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/sitemap">Sitemap</a>
+                </li>
+              </ul>
+
+              <a class="mr-2" href="https://twitter.com/MerjCom">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x text-white"></i>
+                </span>
+              </a>
+              <a class="mr-2" href="https://www.linkedin.com/company/merj-com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x text-white"></i>
+                </span>
+              </a>
+
+              <a class="mr-2" href="https://github.com/merj">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x text-white"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <p class="nav-link">&copy; MERJ Limited 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- /container -->
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script data-turbolinks-eval=false>window.jQuery || document.write('<script src="/assets/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://merj.com/assets/application-343091474179c77ec78796b842e6867637c4804c8fd21e5a32fd0dd9019210e5.js"></script>
+<script src="https://merj.com/assets/bootstrap.min-508195975fbea156ccca2a617478e7f1a3efba59d6cff102a060a726eeeb8205.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://merj.com/assets/ie10-viewport-bug-workaround-65a26b43455f6c4c37fd5514e5f1fd6b6e220515afd5328288617b918014fc95.js"></script>
+  <script src="https://merj.com/assets/newsletter-signup-f9c6aac94865cc0ba7de430d459efdb205f859062311a51c05cbf8912ede359b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  <script src="https://merj.com/assets/jssocials-3f940641bb5f495de7497e21996d516cd94d735da843705903b541bede779c97.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#social-share").jsSocials({
+      text: "Dynamic Classifications with Excel: LOOKUP + SEARCH",
+      shareIn: "popup",
+      url: "https://merj.com/digital/blog/dynamic-classifications-with-excel-lookup-and-search",
+      showCount: false,
+      shares: [
+        { share: "twitter" }, "facebook", "linkedin", "googleplus", "whatsapp", "pinterest", "email"
+      ]
+    });
+    $('.card-eq').matchHeight();
+  });
+  </script>
+
+  </body>
+</html>

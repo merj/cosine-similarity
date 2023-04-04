@@ -1,0 +1,15 @@
+Copy your numbered html files to this directory.
+
+If you're using our web crawler you can use the eh command to exporting the numbered html files, and the eu command to export the numbered urls.
+
+When you're ready to proceed execute example.sh
+
+$ ./example.sh
+...
+$
+
+Glossary
+
+eh      export numbered html files (not included)
+eu      export urls (not included)
+ih      import numbered html files

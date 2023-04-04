@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="en"><!--<![endif]-->
+<head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb# website: //ogp.me/ns/website#">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"52a68078fa","applicationID":"35330896","transactionName":"Jg0KEhFcXlpcERgBCQoFSxULXEU=","queueTime":0,"applicationTime":126,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Technical SEO Roundup January 2018 | MERJ</title>
+<meta name="description" content="The first month of 2018 brought only a small amount of technical SEO updates. However, the ones that did appear focused on the way that Google delivers news,...">
+<link rel="canonical" href="https://merj.com/digital/blog/technical-seo-roundup-january-2018">
+<link rel="image_src" href="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technical SEO Roundup January 2018">
+<meta property="og:description" content="The first month of 2018 brought only a small amount of technical SEO updates. However, the ones that did appear focused on the way that Google delivers news, Page Speed, Accelerated Mobile Pages (A...">
+<meta property="og:email" content="team@merj.com">
+<meta property="og:image" content="https://merj.com/assets/logo.png">
+<meta property="fb:app_id" content="1451374375123331">
+<meta name="twitter:title" content="Technical SEO Roundup January 2018">
+<meta name="twitter:description" content="The first month of 2018 brought only a small amount of technical SEO updates. However, the ones that did appear focused on the way that Google delivers news, Page Speed, Accelerated Mobile Pages (A...">
+<meta name="twitter:image" content="https://merj.com/assets/logos/social/twitter-square-1200x1200.png">
+<meta name="twitter:domain" content="https://merj.com/">
+<meta name="twitter:site" content="@MerjCom">
+<meta name="twitter:creator" content="@MerjCom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Reading Time">
+<meta name="twitter:data1" content="18 Minutes 🕑">
+<meta name="robots" content="index,follow">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Z7bCJwRrHZ0aiXsxyhKC8OUTYc0kMEp1Dn5TOwpxzWlHcn4Um+LvJ9UOnY0MxdpjcrslwGcEStK62gumEkV7Ug==">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta name="slack-app-id" content="A6M7SHS1M" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://merj.com/assets/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://merj.com/assets/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://merj.com/assets/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://merj.com/assets/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://merj.com/assets/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://merj.com/assets/favicons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" href="https://merj.com/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://merj.com/assets/favicons/favicon-16x16.png" sizes="16x16" />
+<!--[if IE]><link rel="shortcut icon" href="https://merj.com/assets/favicons/favicon.ico" /><![endif]-->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://merj.com/assets/favicons/mstile-144x144.png" />
+<link rel="stylesheet" media="all" href="https://merj.com/assets/application-7c82bf3000ab5e2cc2900446c42cec34d0ba56bd4e89ebb681ac076250a72443.css" data-turbolinks-track="reload" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials.css" />
+  <link rel="stylesheet" media="all" href="https://merj.com/assets/jssocials-theme-flat.css" />
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Digital Blog (RSS)" href="https://merj.com/digital/blog.rss" />
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85914762-3',{'cookieDomain':'merj.com','siteSpeedSampleRate':100});
+  ga('require','linkid','linkid.js');ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+</script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/">
+    <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbar-top">
+  <ul class="navbar-nav mr-auto">
+    
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/digital/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/login">Log In</a>
+      </li>
+  </ul>
+</div>
+  </div>
+</nav>
+    <noscript>
+  <p class="alert alert-block alert-danger text-center alert-rectangle">
+    You need to turn on JavaScript.
+  </p>
+</noscript>
+
+
+
+
+    
+
+
+
+
+<div class="bg-subhead">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-5 px-sm-2 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 px-sm-2">
+  <main role="main" class="row">
+    <article role="article" itemtype="https://schema.org/BlogArticle" class="col-12">
+
+      <header>
+        <div class="row">
+          <div class="col-12 py-5 pb-md-6 post-meta">
+            <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 07 February 2018
+            <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> <span class="hidden-xs-down">Reading Time: </span>18 Minutes</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 my-6 my-sm-9 my-md-11 text-center">
+            <h1 itemprop="headline" role="heading" class="my-0">Technical SEO Roundup January 2018</h1>
+            <p>By Ryan Siddle</p>
+          </div>
+        </div>
+
+        <meta itemprop="datePublished" content="2018-02-07" />
+        <meta itemprop="dateModified" content="2018-02-07" />
+
+        <span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="MERJ">
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://merj.com/assets/logos/logo-invert@3x.png">
+          </span>
+        </span>
+
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Ryan Siddle" />
+        </span>
+
+        <span class="hidden" itemprop="sourceOrganization">
+          <span itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MERJ" />
+          </span>
+        </span>
+
+        <hr class="col-lg-10 col-lx-9 mt-0 mb-6 mb-sm-9 mb-md-10" />
+      </header>
+
+      <div itemprop="articleBody" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2  mb-6 mb-sm-8">
+        <p>The first month of 2018 brought only a small amount of technical SEO updates. However, the ones that did appear focused on the way that Google delivers news, Page Speed, Accelerated Mobile Pages (AMP), and featured snippets.</p>
+
+<p>At the bottom of this roundup we have also placed an extensive reading list, so make sure to check it out.</p>
+
+<h2>Technical Bug De-Indexes Publishers in Google News</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Early in the second week of January, a growing number of news publishers complained on the <a target="_blank" rel="noopener noreferrer" href="https://productforums.google.com/forum/?hl=en#!topic/news/UY56wrC0zeg">Google News Help Forum</a> that their publications had been de-indexed from Google News.</p>
+
+<p>Although some publishers received notifications that their publications would be removed, in the majority of cases, no warnings were issued.</p>
+
+<p>The publishers that did receive warnings were told that Google "periodically" reviews its news sources and that in this instance, they could no longer be featured within Google News, possibly part of the push against fake news.</p>
+
+<p>On January 9 Valerie Streit from the <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/news/forum/AAAAKvAM41Il-FQyspiXXM/?hl=en">Google News Team posted on Google News Help</a> and stated that the team was very much aware of the issue and that they were actively monitoring posts and complaints.</p>
+
+<p>Issuing an update on the same day, Valerie reported that the de-listings were the result of a technical issue, and were not the result of any manual actions by Google.</p>
+
+<p>The team pledged to have the incorrectly removed sites re-listed as soon as possible.</p>
+
+<p>It is unclear just how many news sites were de-indexed from Google News, but it is believed that the bug has now been fixed and that sites were relisted within a matter of days.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+No action is required here as the technical issue that caused the delisting has now been resolved and any removed publishers have now been relisted.
+</div></p>
+
+<h2>AMP Testing Tool Released</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>While <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/search-console/amp?resource_id=https%3A%2F%2Fexample.com%2F&amp;hl=en">Search Console AMP errors are useful</a>, developers should test code locally before pushing it to staging/UAT and production.</p>
+
+<p>Google has released a new AMP testing tool that allows developers to insert a URL, request the AMP page, and view any errors that are detected.</p>
+
+<p>You can find it by typing "amp testing tool" into the address bar of your Chrome Web Browser, where the AMP input box is then provided.</p>
+
+<p>You may also <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/test/amp">bookmark the tool</a>.</p>
+
+<p><strong>Are you testing on your development environment?</strong></p>
+
+<p>It’s worth noting that Google's AMP testing tool does not allow you to upload any HTML markup or use <code class="prettyprint">localhost</code>, so you will need to create a virtual tunnel.</p>
+
+<p>This will bind your preferred local network and port to a public Internet address. </p>
+
+<p>You can use <a target="_blank" rel="noopener noreferrer" href="https://ngrok.com">ngrok</a> to do this for free.</p>
+
+<p><a href="https://ngrok.com" target="_blank" rel="noopener noreferrer"><img src="/uploads/blog/ngrok-localhost-amp-test.gif" alt="ngrok amp test" class="img-fluid my-4 d-block mx-auto"></a></p>
+
+<p>In the example above, all requests from <code class="prettyprint">http://27e8bb35.ngrok.io</code> are now routed to <code class="prettyprint">http://localhost:5000</code>.</p>
+
+<p>This allows you to test local AMP URLs using a public URL such as <code class="prettyprint">http://27e8bb35.ngrok.io/news/1234.amp</code>.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Use Search Console to see if you have any AMP errors. </p>
+<p>To use Google's AMP testing tools on your development machines, use a virtual tunnel to allow the service to connect to your localhost.</p>
+</div></p>
+
+<h2>AMP URLs to Allow Publisher Branding</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>After issues regarding user privacy, Google is now allowing publishers to <a target="_blank" rel="noopener noreferrer" href="https://amphtml.wordpress.com/2018/01/09/improving-urls-for-amp-pages/amp/">use AMP within their own URL branding</a>.</p>
+
+<p>Following months of research by the AMP Team, Google now removes any tracking before publication by hosting a cached copy of the AMP output on its servers, allowing for a sanitisation of the cached result.</p>
+
+<p>The new procedure also means that the custom URLs are no longer slow, which would defeat the whole point of AMP.</p>
+
+<p>Performance is maintained by Web Packaging the CSS, JavaScript, images, and any other media. Third party assets, such as jQuery, referenced on content delivery networks, are also automatically bundled in for the user. All files are cryptographically signed to ensure that they are not changed throughout the delivery process.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>We expect that no changes will be required.</p>
+<p>Malte Ubl, Tech Lead for the AMP Project at Google stated that the changes will be rolled out in the second half of 2018.</p>
+</div></p>
+
+<h2>Google Announces "Speed Update" for Mobile Searches</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-danger">High</span>
+</span></p>
+
+<p>On January 17, Google announced its "Speed Update" where <a target="_blank" rel="noopener noreferrer" href="https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html">it declared that page speed shall be considered a ranking factor</a> for mobile searches from July 2018.</p>
+
+<p>Although page speeds have been used as a signal for desktop devices for some time, the change shall affect mobile pages that deliver the slowest experience to users, which will involve only a small percentage of queries.</p>
+
+<p>Regardless of the technology used to build a page, Google states that the same standard will apply to all, while the intent of the search query still holds a strong signal, so a slow page may still rank highly if it happens to hold relevant, quality content.</p>
+
+<p><strong>Net Neutrality and Page Speed</strong></p>
+
+<p>This update might cause issues later down the line in the U.S., due to the vote was taken by the Federal Communications Commission, <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Net_neutrality_in_the_United_States">which voted to repeal net neutrality laws enforced in 2015</a>. This means that if ISPs are served with total control over the bandwidth that each content provider receives, they might slow or speed up a connection, depending on how much money is being paid. This works true for the web hosting providers too.</p>
+
+<p>Theoretically, if a content or web hosting provider can pay more money than a competitor, it might rank higher, due to the imbalance of bandwidth applied to each.</p>
+
+<p>We are still unsure how the repeal will play out, and whether ISPs will decide to control Internet speeds based on the income provided to them, but it is hoped that Google will be able to find a way around the issue, should it all come to pass.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Regardless of whether Google was including page loading speeds on mobile as a signal previously, page speed has always been important for user experience.</p>
+<p>There are now a range of tools being published on the market so that webmasters can consider a widening range of metrics that affect user experiences.</p>
+<p>It’s always worth using a variety of tools to ensure that you can effectively evaluate a page’s performance.</p>
+<p>Here are some useful tools to consider:</p>
+<ul>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> - Free</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="http://sitespeed.io">Sitespeed.io</a> - Free</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://httpd.apache.org/docs/2.4/programs/ab.html">Apache AB</a> - Here is a <a target="_blank" rel="noopener noreferrer" href="https://blog.getpolymorph.com/7-tips-for-heavy-load-testing-with-apache-bench-b1127916b7b6">tutorial to get started</a>. - Free</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://loader.io">Loader.io</a> - Free/Paid</li>
+<li>
+<a target="_blank" rel="noopener noreferrer" href="https://newrelic.com">New Relic</a> - Free/Paid</li>
+</ul>
+</div></p>
+
+<h2>Google Search Console Invites</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>Google has been widening its Search Console public beta throughout January and by now many businesses will have received one or two emails announcing its introduction.</p>
+
+<div class="row">
+<div class="col-md-8 push-md-2">
+<img src="/uploads/blog/introducing-the-new-search-console.gif" alt="Google Search Console Invite" class="img-fluid my-4 d-block mx-auto">
+</div>
+
+<p></p>
+</div>
+
+<p>If you are still waiting for a notification, you can use the following URL, by replacing the <code class="prettyprint">resource_id</code> parameter with your own profile URL (subdirectories work too):</p>
+
+<pre><code class="prettyprint">https://search.google.com/search-console/index?resource_id=https://www.example.com
+</code></pre>
+
+<p>You will still need to switch between the current dashboard and beta dashboard to access all Search Console functionality. We expect Google to roll out the new features throughout 2018.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Open your new Search Console index report and review the new granularity of XML sitemaps as well as URL error reporting. Unfortunately, it's a little tricky to copy the URLs in the list, so we have submitted a suggestion for the Search Console team:</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">It would be good if the <a href="https://twitter.com/googlewmc?ref_src=twsrc%5Etfw">@googlewmc</a> team could add a new tab link for the page URL? Trying to copy and paste the link, which expands and contracts the side window is tricky. Any thoughts <a href="https://twitter.com/JohnMu?ref_src=twsrc%5Etfw">@JohnMu</a>? <a href="https://t.co/uYjoOTuOjf">pic.twitter.com/uYjoOTuOjf</a></p>— Ryan Siddle (@ryansiddle) <a href="https://twitter.com/ryansiddle/status/959077390625509376?ref_src=twsrc%5Etfw">February 1, 2018</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>For agencies and in-house companies that happen to be managing more than ten profiles, you can set up a temporary rule to move the Search Console email straight to your trash bin:</p>
+</div></p>
+
+<pre><code class="prettyprint">From: sc-noreply@google.com
+Subject: Introducing the new Search Console for .*
+</code></pre>
+
+<h2>The Subdomain vs. Subdirectories Debate Rages On</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>After <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/uJGDyAN9g-g">John Mueller posted a video on YouTube</a> mentioning that subdomains and subdirectories are treated equally by Google's algorithms, a debate about the subject quickly arose between Google and SEOs on Twitter.</p>
+
+<p>Mueller’s statement echoes one that <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=_MswMYk05tk">Matt Cutts said way back in 2012</a>, that webmasters should do what is best for their business and DevOps team.</p>
+
+<p>Assuming that Mueller is correct about the way that Google's algorithms treat subdomains and subdirectories, many of the SEOs and companies that are reporting the contrary might need to rebuild their recommendations.</p>
+
+<p>Based on this isolated statement, websites providing subdomain tenancy to clients would be able to piggyback off the company entity, but we are sure there would be exceptions.</p>
+
+<p>Many years ago, companies that employed article spinning and poor quality content were penalised with the Google Panda update. After this occurred, to counteract this penalty, many of these companies created new subdomains for each author, although there are high profile examples (WordPress, Tumblr, and Slack) where subdomains are not treated equally and it should most likely be viewed as an exception.</p>
+
+<p>It would of course be useful if Google's Search Console provided an option to state whether a domain happens to be multi-tenant.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>We still believe that, if your domain is used by a single entity,  it is safer to reverse proxy web applications hosted on subdomains onto your main domain.</p>
+<p>For example, if your company uses an ecommerce platform on the www subdomain <a href="https://www.example.com" rel="nofollow" target="_blank">https://www.example.com</a>, and has an isolated Wordpress installation on another server <a href="https://blog.example.com" rel="nofollow" target="_blank">https://blog.example.com</a>, a reverse proxy can be setup to hide the server details and make the blog accessible through <a href="https://www.example.com/blog" rel="nofollow" target="_blank">https://www.example.com/blog</a>.</p>
+<p>As well as being one of the most popular web servers, Nginx also provides <a target="_blank" rel="noopener noreferrer" href="https://www.nginx.com/resources/admin-guide/reverse-proxy/">reverse proxy functionality</a>.</p>
+</div></p>
+
+<h2>Featured Snippets Take on New Forms</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-success">High</span><br>
+Difficulty: <span class="text-warning">Medium</span>
+</span></p>
+
+<p>On the very last day of January, Danny Sullivan published <em><a target="_blank" rel="noopener noreferrer" href="https://www.blog.google/products/search/reintroduction-googles-featured-snippets/">A reintroduction to Google’s featured snippets</a></em>, in which he discussed not only what featured snippets are, but also when they happen to be shown for users, and how Google is still evolving them.</p>
+
+<p>In the article, Sullivan stated that featured snippets will diversify answers in the future so that the search experience can be enhanced by providing sources that are of both good quality and are from both publications large and small.</p>
+
+<p>So instead of serving an answer to a user that would be presented as a universal truth, as it has in the past (snippets has been accused of providing some "<a target="_blank" rel="noopener noreferrer" href="https://theoutline.com/post/1192/google-s-featured-snippets-are-worse-than-fake-news">shockingly bad</a>" answers for quite some time), it would now offer multiple answers in a variety of forms, which are interactive, allowing the user to  select an answer based on their individual query and expectations.</p>
+
+<p>This means that users might be served with multiple answers when there are differing opinions;  "do reptiles make good pets?"</p>
+
+<p>Additionally, users can now provide feedback on a snippet using the link at the bottom of its box.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>Continue to offer quality content to users and consider what questions a person would ask so that you can cater to some of their most important queries. Research what competitors are doing and consider offering FAQ pages to users.</p>
+<p>Consider making a list of all your web page templates. Evaluate whether any new schema.org schemas may be applicable.</p>
+</div></p>
+
+<h2>Bonus: Twitter Product Cards for Third Parties</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Medium</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>This isn’t strictly technical SEO but this is a nice social sharing hack that businesses could take advantage of.</p>
+
+<p>It seems that <a target="_blank" rel="noopener noreferrer" href="https://dev.twitter.com/cards/types/product">Twitter Product Cards</a> are no longer available. However, this does not mean that companies are no longer using the schema.</p>
+
+<p>For example, when sharing a <a target="_blank" rel="noopener noreferrer" href="https://community.cloudflare.com/t/welcome-say-hello/94">Cloudflare Community link</a> within Slack, the Twitter Cards are still shown, and in Cloudflare’s case, emojis are included, which gives them an extra pop.</p>
+
+<p><img src="/uploads/blog/twitter-product-card-data-label.gif" alt="Twitter Product Card Data Label" class="img-fluid my-4 d-block mx-auto"></p>
+
+<p>Hackernoon/Medium is using "Reading time" in <a target="_blank" rel="noopener noreferrer" href="https://hackernoon.com/part-2-how-to-stop-me-harvesting-credit-card-numbers-and-passwords-from-your-site-844f739659b9">this example</a>.</p>
+
+<p><img src="/uploads/blog/hackernoon-twitter-data-labels.gif" alt="Hackernoon Twitter Data Labels" class="img-fluid my-4 d-block mx-auto"></p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>There are other platforms that still use the data tags, so it could be worth including them to assist with some sort of call-to-action.</p>
+<p>The original Twitter Product supported only two data labels, and you can put your own data attributes in there, including star ratings, prices, shares, and claps. Use emojis if this aligns with your company brand guidelines.</p>
+<p>Share this web page in Slack with your team and you will see the reading timing too.</p>
+</div></p>
+
+<pre><code class="prettyprint">&lt;head&gt;
+...
+&lt;meta name="twitter:label1" value="Reading time" /&gt;
+&lt;meta name="twitter:data1" value="15 mins 🕑" /&gt;
+&lt;meta name="twitter:label2" value="Likes" /&gt;
+&lt;meta name="twitter:data2" value="379 ❤" /&gt;
+...
+&lt;/head&gt;
+</code></pre>
+
+<h2>Beta: Bulletin - Local News Creation App Released in two U.S. Cities</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Unknown</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>It seems that Google has been testing a new app that might provide people with the opportunity to both report and publish their own local news stories without owning a blog or being part of a media outlet.</p>
+
+<p>Named <a target="_blank" rel="noopener noreferrer" href="https://posts.google.com/bulletin/share">Bulletin</a>, the app enables people to contribute hyperlocal stories about their community directly from their mobile phones, which could range from book readings to high school sporting events.</p>
+
+<p>Although the app has only so far been released in two cities within the U.S. (Nashville and Oakland), Google confirmed that it was "very much in the testing phase and aimed at hyperlocal stories and events for people to share, and for local media to take advantage of."</p>
+
+<p>This could just be another attempt by Google to break into social media, albeit from a news angle, but it would be interesting to see how this influences Google News in the future.</p>
+
+<p>It’s also worth taking into consideration whether the new app could be manipulated by bots, or if it has the ability to shut down people creating their own fake news stories.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+<p>If Bulletin is released in your area in the future, it is advised that any local news that you cover is backed up by sources other than Bulletin, at least until we see just how bullet-proof Bulletin is.</p>
+<p>Google has taken a variety of steps to ensure that it provides legitimate news over the past year, but a cautious approach is always recommended when dealing with brand new media.</p>
+</div></p>
+
+<h2>Google tests new local hotel finder and hotel knowledge UI</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Unknown</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>It seems that Google has been testing new features for its local hotel finder and the local knowledge panel, as <a target="_blank" rel="noopener noreferrer" href="https://alakov.com/blog/hotel-local-finder-and-kp-test">reported by Sergey Alakov </a>.</p>
+
+<p>New features for the local finder include an image carousel for listings and hotel filter for user interface, price label design and map and toggle button design.</p>
+
+<p>As for the knowledge panel, the changes are more extensive, with five tabs covering aspects such as overview, prices, reviews, about, and photos (the last two of which are new).</p>
+
+<p>Importantly for hotels, the "about" tab features an establishment’s description, its amenities, accessibility, general offerings, lodging options, crowd, and payment information - so keeping up to date details, as always, is imperative. The Q&amp;A section seems to have been revoked during this testing phase, which could indicate a rollback on this particular feature.</p>
+
+<p>It’s important for hotel suppliers to keep up to date with these split tests, as after all, the finder is based on a feed provided from paid media, and results will affect competition between providers.</p>
+
+<p>It’s worth bearing in mind that the split testing will impact customers who happen to be searching for hotels on the fly.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+Ensure that hotel information is up to date and monitor click-through rates for mobile devices.
+</div></p>
+
+<h2>Google Flights Prediction</h2>
+
+<p><span class="bold">
+Benefit: <span class="text-warning">Unknown</span><br>
+Difficulty: <span class="text-success">Low</span>
+</span></p>
+
+<p>On January 31, <a target="_blank" rel="noopener noreferrer" href="https://www.blog.google/topics/travel/get-help-cheaper-flights-and-potential-flight-delays-winter/">Google announced two brand new features</a> for its flight booking service.</p>
+
+<p>Not only will Google Flights tell users what amenities are not included in basic economy fares, such as seat selection, but also, by utilising historic flight status data, it will tell users which flights are likely to be delayed (and why!).</p>
+
+<p>The company states that it will only flag delays when it is approximately 80% confident that a flight will be delayed on take off, but it has been suggested that this feature may only serve the purpose of impressing first-time users - travellers should not base their travel decisions on predicted flight delays by Google.</p>
+
+<p><div class="action-points px-7 py-7 mt-7 mb-6">
+<p class="h5">Action Points</p>
+No action required.
+</div></p>
+
+<h2>Additional Reading</h2>
+
+<h4>Chrome 41</h4>
+
+<p>With <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/search/docs/guides/rendering">Google updating its documentation to show it uses Chrome 41</a>, developers can now download that particular version of the browser and see exactly what Google's web crawler can see. Tomasz Rudzki wrote a great piece on <a target="_blank" rel="noopener noreferrer" href="https://www.elephate.com/blog/chrome-41-key-to-website-rendering/">features, troubleshooting and differences with Chrome 41</a>.</p>
+
+<h4>Lessons to be Learned Around Harvesting Personal Data</h4>
+
+<p>With the complexity of web applications increasing on a non-linear basis David Gilbertson has taken an interesting approach to showing issues with web security. </p>
+
+<p>Although based on hypotheticals (who would have thought that <a target="_blank" rel="noopener noreferrer" href="https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/">leftpad could have taken down a third of the internet?</a>), it’s worth ignoring the clickbait titles in this instance, as the content below is very much worth reading.</p>
+
+<ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5">Part 1: I’m harvesting credit card numbers and passwords from your site</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://hackernoon.com/part-2-how-to-stop-me-harvesting-credit-card-numbers-and-passwords-from-your-site-844f739659b9">Part 2: How to stop me harvesting credit card numbers and passwords from your site</a></li>
+</ul>
+
+<h4>Console Log Hacking for Googlebot</h4>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jroakes">JR Oakes</a> has created a useful script that could prepend console log queries to HTML so that we can understand what Googlebot was looking at on a particular page. </p>
+
+<p>You can <a target="_blank" rel="noopener noreferrer" href="https://codeseo.io/console-log-hacking-for-googlebot/">read more about it here</a> and also download the scripts for yourself.</p>
+
+<h4>Hackers Hiding Content in PNG Files</h4>
+
+<p>In what’s known as a "hacking for links" attack David Harry has reported that <a target="_blank" rel="noopener noreferrer" href="http://www.thesempost.com/hackers-hiding-content-links-png-files/">hackers successfully found a way to hide nefarious links in PNG files</a> in a client’s website after gaining access through a dated WordPress plugin.</p>
+
+<p>Despite being hacked for nearly two years, Google didn’t notice that the site was hacked and continued to serve it within the SERPs.</p>
+
+<h4>Using White Space for Scoping Queries</h4>
+
+<p><a target="_blank" rel="noopener noreferrer" href="https://dejanseo.com.au/google-search-console-tip/">Dan Petrovic provides a great tip</a> by noting that SEOs should use spaces to isolate a word if it is part of a longer word (such as "PR") when searching for queries in Google Search Console.</p>
+
+<p>By doing so, you will be served with refined results.</p>
+
+<h4>Google Search Assistant</h4>
+
+<p>Google has announced that it has published <a target="_blank" rel="noopener noreferrer" href="https://research.googleblog.com/2017/12/evaluation-of-speech-for-google.html">Google Assistant and voice search quality guidelines</a>.</p>
+
+<p>It also provides specific guidelines for third parties to evaluate the quality of search results and Google Assistant voice searches.</p>
+
+<p>You can also <a target="_blank" rel="noopener noreferrer" href="https://storage.googleapis.com/guidelines-eyesfree/evaluation_of_search_speech_guidelines_v1.0.pdf">download the full PDF here</a>.</p>
+
+<h4>Upload Videos to Google Business Listings</h4>
+
+<p>Businesses can now <a target="_blank" rel="noopener noreferrer" href="https://www.en.advertisercommunity.com/t5/News-Updates/Launch-Videos-in-the-Google-My-Business-Dashboard/m-p/1612720#">upload videos and view ones made by customers in Google My Business</a> so that they appear on both Google Maps and in local search listings.</p>
+
+<p>Supporting videos up to 30 seconds in length, for now, business owners will also be able to flag inappropriate videos by customers through their dashboard.</p>
+
+      </div>
+    </article>
+
+    <div class="col-sm-12 pb-5 text-center">
+      <div id="social-share"></div>
+    </div>
+
+
+    <div class="col-sm-12 mb-6">
+      <hr class="my-0" />
+    </div>
+
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 10 May 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 17 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-april-2018">Technical SEO Roundup April 2018</a>
+  </h3>
+
+  <p class="card-text">Technical SEO updates from Google were thin during April. Now is a relevant t...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 09 April 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 14 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-march-2018">Technical SEO Roundup March 2018</a>
+  </h3>
+
+  <p class="card-text">What happened in Tech SEO for March? TLS v1.0 depreciation, Let&#39;s Encrypt wid...</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4 mb-6 mb-md-10">
+        <div class="card card-eq">
+          <div class="card-block">
+              <div class="row">
+    <div class="col-12 post-meta pb-4">
+      <span class="fa fa-calendar text-primary " style="font-size:1em"></span> 08 March 2018
+      <span class="pull-right"><span class="fa fa-clock-o text-primary " style="font-size:1em"></span> 18 Minutes
+      </span>
+    </div>
+  </div>
+
+  <h3 class="mt-4 mb-3 h5 lh-normal">
+    <a href="/digital/blog/technical-seo-roundup-february-2018">Technical SEO Roundup February 2018</a>
+  </h3>
+
+  <p class="card-text">What happened? The AMP family grows, Chrome adds new APIs, Custom Properties ...</p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+<div id="footer-subscribe" class="col-sm-12 bg-grey py-7">
+  <form id="user-form" class="simple_form row" novalidate="novalidate" action="/newsletters" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="XjTwAdvoomzkex7osCYzKTfA0SNMVMfMAGNSHWCo8d1+8EwyRGFQ1iv8+FR28Wu6oGiVLg9gx2u0xwqAeJxH5g==" />
+    <div class="col-sm-4 offset-sm-2">
+      <h3>Want more news like this?</h3>
+      <p>Sign up for our free industry news and tools.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div id="error_explanation" class="alert alert-danger r-4" style='display:none;'>
+        <ul class="pl-3 mb-0">
+        </ul>
+      </div>
+      <div class="first_name_1526479725"><style media="screen">.first_name_1526479725 {display:none;}</style><label for="first_name">If you are a human, ignore this field</label><input type="text" name="first_name" id="first_name" tabindex="-1" /></div>
+      <div class="form-group email required user_email"><label class="sr-only email required" for="user_email"><abbr title="required">*</abbr> Email</label><input class="form-control string email required" placeholder="Your work email" type="email" value="" name="user[email]" id="user_email" /></div>
+          <input type="submit" name="commit" value="Subscribe to MERJ" id="user-form-btn" class="btn btn-primary btn-sm text-center" data-disable-with="Subscribe to MERJ" />
+      <div id='user-thankyou' class="text-success" style='display:none;'>
+      </div>
+    </div>
+</form></div>
+
+
+
+
+
+      <footer id="footer-wide" class="pt-5 small">
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-3">
+              <img height="40" alt="MERJ Logo" src="https://merj.com/assets/logo-green.svg" />
+            </div>
+            <div class="col-sm-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/blog">Digital Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/digital/robots-txt-checker">Robots.txt Checker</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/terms">Terms</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <h5>Help</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="/sitemap">Sitemap</a>
+                </li>
+              </ul>
+
+              <a class="mr-2" href="https://twitter.com/MerjCom">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x text-white"></i>
+                </span>
+              </a>
+              <a class="mr-2" href="https://www.linkedin.com/company/merj-com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x text-white"></i>
+                </span>
+              </a>
+
+              <a class="mr-2" href="https://github.com/merj">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x text-white"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <p class="nav-link">&copy; MERJ Limited 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- /container -->
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script data-turbolinks-eval=false>window.jQuery || document.write('<script src="/assets/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://merj.com/assets/application-343091474179c77ec78796b842e6867637c4804c8fd21e5a32fd0dd9019210e5.js"></script>
+<script src="https://merj.com/assets/bootstrap.min-508195975fbea156ccca2a617478e7f1a3efba59d6cff102a060a726eeeb8205.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://merj.com/assets/ie10-viewport-bug-workaround-65a26b43455f6c4c37fd5514e5f1fd6b6e220515afd5328288617b918014fc95.js"></script>
+  <script src="https://merj.com/assets/newsletter-signup-f9c6aac94865cc0ba7de430d459efdb205f859062311a51c05cbf8912ede359b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  <script src="https://merj.com/assets/jssocials-3f940641bb5f495de7497e21996d516cd94d735da843705903b541bede779c97.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#social-share").jsSocials({
+      text: "Technical SEO Roundup January 2018",
+      shareIn: "popup",
+      url: "https://merj.com/digital/blog/technical-seo-roundup-january-2018",
+      showCount: false,
+      shares: [
+        { share: "twitter" }, "facebook", "linkedin", "googleplus", "whatsapp", "pinterest", "email"
+      ]
+    });
+    $('.card-eq').matchHeight();
+  });
+  </script>
+
+  </body>
+</html>
